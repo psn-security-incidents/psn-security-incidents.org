@@ -1,0 +1,349 @@
+/* === Background & Atmosphere === */
+
+body {
+  background-color: #0d1117;
+  background-image: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(0, 112, 209, 0.08) 0%,
+    transparent 60%
+  );
+}
+
+/* Subtle CRT scanline overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  z-index: 9999;
+}
+
+/* === Flowchart Node Structure === */
+
+.flow-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* === Card Styles === */
+
+.flow-card {
+  width: 100%;
+  max-width: 40rem;
+  border: 1px solid #30363d;
+  border-radius: 0.5rem;
+  background: #161b22;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.flow-card:hover {
+  border-color: #0070d1;
+  box-shadow: 0 0 12px rgba(0, 112, 209, 0.2);
+}
+
+/* Type-specific left accent borders */
+.flow-node--decision > .flow-card { border-left: 3px solid #f59e0b; }
+.flow-node--action > .flow-card   { border-left: 3px solid #3b82f6; }
+.flow-node--warning > .flow-card  { border-left: 3px solid #ef4444; }
+.flow-node--info > .flow-card     { border-left: 3px solid #6b7280; }
+.flow-node--section > .flow-card  { border-left: 3px solid #8b5cf6; }
+
+/* Section cards have a slightly different bg */
+.flow-node--section > .flow-card {
+  background: rgba(139, 92, 246, 0.05);
+}
+
+/* Warning cards have a subtle red tint */
+.flow-node--warning > .flow-card {
+  background: rgba(239, 68, 68, 0.04);
+}
+
+/* === Card Header === */
+
+.flow-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.75rem 1rem;
+  min-height: 2.75rem;
+  user-select: none;
+}
+
+.flow-card__icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.flow-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flow-card__step {
+  font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  font-size: 0.7rem;
+  color: #39ff14;
+  opacity: 0.6;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+}
+
+.flow-card__label {
+  flex: 1;
+  font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #e5e7eb;
+}
+
+/* === Hover Badge (floating, top-right) === */
+
+.flow-card__badge {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.25rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0070d1;
+  background: #0d1117;
+  border: 1px solid #0070d1;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.4rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 1;
+}
+
+.flow-card:hover .flow-card__badge {
+  opacity: 1;
+}
+
+/* === Card Detail (Expandable) === */
+
+.flow-card__detail {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.25s ease-out;
+}
+
+.flow-card__detail-inner {
+  padding: 0 1rem 0.75rem 2.875rem;
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: #9ca3af;
+  border-top: 1px solid rgba(48, 54, 61, 0.5);
+  margin-top: 0;
+  padding-top: 0.75rem;
+}
+
+/* Detail text scrollable on mobile for long content */
+@media (max-width: 639px) {
+  .flow-card__detail-inner {
+    max-height: 16rem;
+    overflow-y: auto;
+    padding-left: 1rem;
+  }
+}
+
+/* === Connector Lines === */
+
+/* Vertical stub from parent card down to children */
+.flow-connector-stub {
+  width: 2px;
+  height: 1.25rem;
+  background: #0070d1;
+  box-shadow: 0 0 6px rgba(0, 112, 209, 0.35);
+  flex-shrink: 0;
+}
+
+/* Sequential children: vertical column */
+.flow-children--sequential {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Vertical line between sequential siblings */
+.flow-children--sequential > .flow-node + .flow-node::before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 1.25rem;
+  background: #0070d1;
+  box-shadow: 0 0 6px rgba(0, 112, 209, 0.35);
+  flex-shrink: 0;
+}
+
+/* === Choice (Branching) Layout === */
+
+/* Mobile: stacked vertically */
+.flow-children--choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+}
+
+/* OR divider between choice branches (mobile) */
+.flow-choice-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 80%;
+  max-width: 20rem;
+  padding: 0.5rem 0;
+}
+
+.flow-choice-divider__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(245, 158, 11, 0.3);
+}
+
+.flow-choice-divider__text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #f59e0b;
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+}
+
+/* Desktop: side-by-side branches */
+@media (min-width: 768px) {
+  .flow-children--choice {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .flow-children--choice > .flow-node {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+  }
+
+  /* Horizontal connector segments on each branch child.
+     Each node draws a line from its center outward; together they
+     form a continuous bar spanning center-to-center across the gap. */
+  .flow-children--choice > .flow-node::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 2px;
+    background: #f59e0b;
+    box-shadow: 0 0 6px rgba(245, 158, 11, 0.35);
+  }
+
+  /* First child: center to right edge + half gap */
+  .flow-children--choice > .flow-node:first-child::after {
+    left: 50%;
+    right: -0.75rem;
+  }
+
+  /* Last child: left edge + half gap to center */
+  .flow-children--choice > .flow-node:last-child::after {
+    left: -0.75rem;
+    right: 50%;
+  }
+
+  /* Middle children (3+ branches): span full width + gap on both sides */
+  .flow-children--choice > .flow-node:not(:first-child):not(:last-child)::after {
+    left: -0.75rem;
+    right: -0.75rem;
+  }
+
+  /* Vertical stubs from bar down to each branch */
+  .flow-children--choice > .flow-node::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 1rem;
+    background: #f59e0b;
+    box-shadow: 0 0 6px rgba(245, 158, 11, 0.35);
+    margin: 0 auto 0.5rem;
+    flex-shrink: 0;
+  }
+
+  /* Hide OR dividers on desktop */
+  .flow-choice-divider {
+    display: none;
+  }
+
+  /* Cards inside choice branches are narrow — wrap icon+step to a top line,
+     give the label full width on the next line */
+  .flow-children--choice .flow-card__header {
+    flex-wrap: wrap;
+  }
+
+  .flow-children--choice .flow-card__label {
+    flex-basis: 100%;
+  }
+}
+
+/* === Section Children Collapse === */
+
+.flow-children.flow-children--collapsed {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease-out, opacity 0.2s ease-out;
+}
+
+.flow-children:not(.flow-children--collapsed) {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.05s;
+}
+
+/* Section badges use violet instead of blue */
+.flow-node--section > .flow-card .flow-card__badge {
+  color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+/* === Decision Node Glow Pulse === */
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(245, 158, 11, 0.15); }
+  50%      { box-shadow: 0 0 14px rgba(245, 158, 11, 0.3); }
+}
+
+.flow-node--decision > .flow-card {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.flow-node--decision > .flow-card:hover {
+  animation: none;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.35);
+}
+
+/* === Utility === */
+
+/* Smooth scroll offset for sticky nav */
+html {
+  scroll-padding-top: 4rem;
+}

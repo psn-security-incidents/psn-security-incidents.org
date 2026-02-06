@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Recovery Guide — PSN Security Incidents</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'psn-blue': '#0070d1',
+            'psn-dark': '#0d1117',
+            'psn-surface': '#161b22',
+            'psn-border': '#30363d',
+            'terminal-green': '#39ff14',
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-psn-dark text-gray-200 min-h-screen font-sans antialiased">
+
+  <!-- Placeholder nav (will be replaced by nav.js later) -->
+  <nav class="border-b border-psn-border bg-psn-surface/80 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="text-psn-blue font-mono font-bold tracking-wider text-lg hover:text-blue-400 transition-colors">
+        PSN Security Incidents
+      </a>
+      <div class="flex items-center gap-3">
+        <button id="expand-all-btn"
+          class="text-xs font-mono px-3 py-1.5 rounded border border-psn-border text-gray-400
+                 hover:text-terminal-green hover:border-terminal-green/50 transition-all duration-200
+                 focus:outline-none focus:ring-1 focus:ring-terminal-green/50">
+          Expand All
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="max-w-4xl mx-auto px-4 pt-8 pb-2">
+    <h1 class="text-2xl md:text-3xl font-mono font-bold text-white mb-3 tracking-tight"
+        data-i18n="recovery.title">
+      <span class="text-terminal-green opacity-70 mr-2">$</span>Account Recovery Guide
+    </h1>
+    <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl"
+       data-i18n="recovery.intro">
+      Interactive step-by-step guide for recovering a compromised PlayStation Network account.
+      Click any step to expand detailed instructions.
+    </p>
+  </header>
+
+  <!-- Legend -->
+  <div class="max-w-4xl mx-auto px-4 py-4">
+    <div class="flex flex-wrap gap-x-5 gap-y-2 text-xs font-mono text-gray-500">
+      <span class="flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-sm bg-amber-500"></span> Decision
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-sm bg-blue-500"></span> Action
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-sm bg-red-500"></span> Warning
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-sm bg-gray-500"></span> Info
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-sm bg-violet-500"></span> Section
+      </span>
+    </div>
+  </div>
+
+  <!-- Flowchart container -->
+  <main class="max-w-4xl mx-auto px-4 pb-16">
+    <div id="flowchart-root" class="py-4">
+      <div class="text-center text-gray-500 py-12" id="flowchart-loading">
+        <span class="font-mono animate-pulse">Loading flowchart<span class="loading-dots">...</span></span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-psn-border py-6 text-center text-gray-600 text-xs font-mono">
+    psn-security-incidents.org
+  </footer>
+
+  <script type="module">
+    import { initFlowchart } from './js/flowchart.js';
+    initFlowchart('flowchart-root', './data/account-recovery-flow.json');
+  </script>
+</body>
+</html>
