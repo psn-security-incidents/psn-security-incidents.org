@@ -34,7 +34,7 @@
               {
                 "id": "hacked.with-contact",
                 "type": "section",
-                "label": "Yes — hacker has contacted me",
+                "label": "Yes",
                 "detail": "The hacker may suggest you sell to them to make it official, or offer similar schemes.",
                 "childMode": "sequential",
                 "children": [
@@ -61,15 +61,15 @@
               {
                 "id": "hacked.no-contact",
                 "type": "section",
-                "label": "No — no contact from hacker",
-                "detail": "The hacker has not reached out (yet).",
+                "label": "No",
+                "detail": "The hacker has not reached out (yet). This may happen, he may wish to 'make it official' because 'you cannot get it back'. Do not engage in a conversation.",
                 "childMode": "sequential",
                 "children": [
                   {
                     "id": "hacked.no-contact.search",
                     "type": "action",
                     "label": "Search for your account being sold online",
-                    "detail": "You can search on social media or elsewhere for account sales to identify if your account is being listed for sale. Screenshot any listings you find."
+                    "detail": "If your account is valuable (3 or 4 letters) you can search on social media for PSN account sales ads to identify if your account has been listed for sale. Screenshot any listings."
                   }
                 ]
               }
@@ -85,72 +85,72 @@
               {
                 "id": "all.verify-logout",
                 "type": "action",
-                "label": "Verify console(s), apps, etc. are actually logged out",
+                "label": "Verify you have been logged out",
                 "detail": "Check all your devices — consoles, mobile apps, web sessions. If any are still logged in, you may still have options to secure the account before the hacker completes the takeover."
               },
               {
                 "id": "all.report-cc",
                 "type": "action",
-                "label": "Report credit card on file as stolen",
-                "detail": "Contact your bank or credit card provider immediately. Report the card that was linked to your PSN account as compromised. This prevents the hacker from making purchases on your card."
+                "label": "Report any attached credit card",
+                "detail": "Contact your bank or credit card provider immediately. Report the card that was linked to your PSN account as compromised. This prevents the hacker from making purchases on your card. Get a new card as the hacker now knows some information about the card that can be re-used later."
               },
               {
                 "id": "all.email-bomb",
                 "type": "action",
-                "label": "Check for email bombing — find the hidden notification",
-                "detail": "You may have been email bombed — flooded with hundreds of spam messages. Go back to the start of the endless spam emails and look for the notification they are trying to hide. Delete the spam messages carefully. Deal with those subscriptions later."
+                "label": "About email-bombing",
+                "detail": "You may have been email bombed — flooded with hundreds of spam messages. Go back to the start of the endless spam emails and unwanted subscription sign ups and look for the notification they are trying to hide."
               },
               {
                 "id": "all.check-sms",
                 "type": "action",
-                "label": "Check recent SMS for two-factor removed message",
+                "label": "Find sony SMS notifications",
                 "detail": "Look through your recent text messages for any notification from Sony that two-factor authentication has been removed from your account. Screenshot this if found — it's important evidence."
               },
               {
                 "id": "all.check-sony-emails",
                 "type": "section",
-                "label": "Look for any and all emails from Sony",
+                "label": "Look for all emails from Sony",
                 "detail": "Search your inbox for all recent Sony/PlayStation emails. These contain critical evidence of what the hacker changed.",
                 "childMode": "sequential",
                 "children": [
                   {
                     "id": "all.check-sony-emails.userid",
                     "type": "action",
-                    "label": "Look for an email saying user-ID was changed",
+                    "label": "User-ID change email",
                     "detail": "This confirms the hacker changed your sign-in ID (email). Screenshot this email."
                   },
                   {
                     "id": "all.check-sony-emails.verify",
                     "type": "warning",
-                    "label": "Look for an email asking to verify email — do NOT verify",
-                    "detail": "If you see an email from Sony asking you to verify an email address change, do NOT click the verification link. This would confirm the hacker's email change and could make recovery harder."
+                    "label": "Please verify e-mail",
+                    "detail": "If you see an email from Sony asking you to verify your current email address, do NOT click the verification link. This would confirm the hacker's email change and could make recovery harder."
                   }
                 ]
               },
               {
                 "id": "all.check-og-email",
                 "type": "action",
-                "label": "Check if your original email is still accessible",
+                "label": "About your PSN OG email",
                 "detail": "Verify that you can still access the email address you originally used to create the PSN account. This will be important for the recovery process."
               },
               {
                 "id": "all.no-self-recovery",
                 "type": "warning",
-                "label": "Do NOT attempt self-recovery with your last email",
-                "detail": "Do not attempt self-account recovery using your last email you had against the account. You will probably be recovering a bogus account and not your account. The hacker has changed the email on file, and may have created a decoy account using your old email."
+                "label": "Do NOT attempt recovery yet",
+                "detail": "Do not attempt self-account recovery using the latest email you had against the account. You will probably be recovering a bogus account and not your account. The hacker has changed the email on file, and may have created a decoy account using your email."
               },
               {
                 "id": "all.call-sony",
                 "type": "section",
-                "label": "Call Sony support during their hours",
-                "detail": "Inform them your account has been hacked. Be prepared for this call to be difficult — but it creates an important record.",
+                "label": "Call Sony support",
+                "detail": "Sony support is not 24/7, call PSN country support (this may not be your local Sony support if your PSN account was out of region) during their hours and inform them your account has been hacked. Be prepared for this call to be difficult — but it creates an important record.",
                 "childMode": "sequential",
                 "children": [
                   {
                     "id": "all.call-sony.contact-info",
                     "type": "info",
-                    "label": "All calls start with giving contact email and phone",
-                    "detail": "They will ask for a contact email and phone number. This does not have to be your account email — it is so they can send you information during the process."
+                    "label": "How support calls go",
+                    "detail": "A sony support call requests your best contact email address. This does not have to be your account email — it is so they can send you information after the call or call survey."
                   },
                   {
                     "id": "all.call-sony.handle",
@@ -161,8 +161,8 @@
                   {
                     "id": "all.call-sony.locked",
                     "type": "warning",
-                    "label": "If support seems immediately unhelpful — account may be locked",
-                    "detail": "If support immediately seems unhelpful, it's likely because their screen says the account is locked for security purposes. The account will have been locked by the hacker (who pretended to be you). Do not panic. Politely attempt to escalate and get a case number. This probably will not work on the first attempt."
+                    "label": "If support is immediately unhelpful",
+                    "detail": "If support immediately sounds unhelpful it's likely because their screen says the account is locked for security purposes (they will not confirm this to you). The account will have been locked by the hacker (who pretended to be you). Do not get annoyed, they are only following a script. Politely attempt to escalate and get a case number. (This probably will not work on the first attempt)."
                   },
                   {
                     "id": "all.call-sony.case-number",
@@ -175,7 +175,7 @@
               {
                 "id": "all.consumer-authorities",
                 "type": "section",
-                "label": "Report to consumer authorities",
+                "label": "Report to gov consumer authorities",
                 "detail": "You will now need to raise a case with the appropriate consumer authorities to get a better response from Sony. This is often the step that actually produces results.",
                 "childMode": "sequential",
                 "children": [
@@ -196,7 +196,7 @@
                         "id": "all.consumer-authorities.au",
                         "type": "action",
                         "label": "Australia — Report to consumer affairs",
-                        "detail": "For Australian region, file a complaint with your state or territory consumer affairs office or the ACCC."
+                        "detail": "For Australian, file a complaint with the ACCC. Do this even if your account is out of region."
                       },
                       {
                         "id": "all.consumer-authorities.eu",
@@ -216,20 +216,20 @@
                       {
                         "id": "all.consumer-authorities.attach.id",
                         "type": "action",
-                        "label": "Your identification — passport or drivers license",
-                        "detail": null
+                        "label": "Your identification",
+                        "detail": "if the report makes has a clear opportunity to provide ID that is not publiuc, upload ID such as passport or drivers license"
                       },
                       {
                         "id": "all.consumer-authorities.attach.cc",
                         "type": "action",
-                        "label": "A copy of a credit card statement",
-                        "detail": "Showing transactions linked to the PSN account proves you are the account holder."
+                        "label": "Copy of a credit card transactions",
+                        "detail": "Showing transactions linked to the PSN account reinforces that you are the account holder."
                       },
                       {
                         "id": "all.consumer-authorities.attach.sony-email",
                         "type": "action",
-                        "label": "A copy of a Sony transaction email",
-                        "detail": "Any purchase confirmation or receipt from PlayStation Store."
+                        "label": "A copy of a Sonys own transaction invoice email",
+                        "detail": "Any purchase confirmation or receipt from PlayStation Store you have in your inbox."
                       },
                       {
                         "id": "all.consumer-authorities.attach.filesize",
@@ -297,13 +297,13 @@
                       {
                         "id": "all.resolution.successful.revert-email",
                         "type": "info",
-                        "label": "Sony may revert account to your last known email",
+                        "label": "Reverting of account to your email",
                         "detail": "Sony may revert the account to your last known email and generate a recovery message. This is unlikely due to the account being flagged."
                       },
                       {
                         "id": "all.resolution.successful.og-email",
                         "type": "info",
-                        "label": "Sony may revert to your original email due to flags",
+                        "label": "Reverting of account to OG email",
                         "detail": "Sony may want to revert to your original email address due to \"flags on the account\". This may take them two steps as the hacker may have created a bogus account on that old email address."
                       },
                       {
@@ -316,19 +316,19 @@
                         "id": "all.resolution.successful.lock-account",
                         "type": "action",
                         "label": "Ask how to lock the account for changes",
-                        "detail": "If offered or if you are speaking to the restoration group, ask how to lock the account for changes. But don't forget — you don't want to lock it with an email the hacker already knows."
+                        "detail": "If offered, or if you are speaking to the restoration group, ask how to lock the account for changes. But don't forget — you don't want to lock it with an email the hacker already knows."
                       },
                       {
                         "id": "all.resolution.successful.change-email",
                         "type": "action",
-                        "label": "Change the email address to one only you know",
-                        "detail": "Change the email address on record to one you possess that is known only to you. Consider using the +alias trick (e.g. yourname+psn@email.com) or a completely new email address or domain."
+                        "label": "Change the account email",
+                        "detail": "Change the email address on record to one you possess that is known only to you. Consider using the +alias trick (e.g. yourname+xyz@email.com) or a completely new email address or domain. You have to coordinate out how to do this before a security lock is applied by Sony."
                       },
                       {
                         "id": "all.resolution.successful.change-password",
                         "type": "action",
-                        "label": "Change the account password or set a passkey",
-                        "detail": null
+                        "label": "Use a passkey",
+                        "detail": "Sony recommend a passkey is used over two-factor. Sony does not support both passkey and two-factor"
                       },
                       {
                         "id": "all.resolution.successful.change-security",
@@ -339,7 +339,7 @@
                       {
                         "id": "all.resolution.successful.change-cc",
                         "type": "action",
-                        "label": "Change the credit card — get a new card",
+                        "label": "Do not re-attach the old credit card",
                         "detail": "Replace the credit card against the account. Get a new card number from your bank, don't just re-add the same card."
                       },
                       {
@@ -354,14 +354,14 @@
                     "id": "all.resolution.unsuccessful",
                     "type": "section",
                     "label": "Resolution unsuccessful",
-                    "detail": "Sony may say they cannot recover the account — for example, if you have no access to your original email anymore. At this point, escalate further.",
+                    "detail": "Sony may say they cannot recover the account — for example, if you have no access to your original email anymore. You will need to escalate further.",
                     "childMode": "sequential",
                     "children": [
                       {
                         "id": "all.resolution.unsuccessful.reopen",
                         "type": "action",
-                        "label": "Re-open or refresh the consumer complaint",
-                        "detail": null
+                        "label": "Refresh the consumer complaint",
+                        "detail": "The original consumer complaint may have been closed by Sony. Re-open it"
                       },
                       {
                         "id": "all.resolution.unsuccessful.detail",
@@ -388,27 +388,27 @@
               {
                 "id": "all.ban",
                 "type": "section",
-                "label": "When your account gets banned for abuse",
-                "detail": "The cherry on the cake. A week later, your account may be \"banned for abuse\". This was a deliberate strategy by the hacker.",
+                "label": "Banned for abuse?",
+                "detail": "The cherry on the cake: A week after restoration, your account may be \"banned for abuse\".",
                 "childMode": "sequential",
                 "children": [
                   {
                     "id": "all.ban.strategy",
                     "type": "info",
-                    "label": "This was deliberate — the hacker planned this",
-                    "detail": "The hacker sent abusive content to other accounts they control, in order to trigger the ban. This is a known tactic to make the account unrecoverable or to punish the original owner."
+                    "label": "A hacker time-bomb",
+                    "detail": "The hacker sent abusive content from your PSN account to other accounts they control, in order to trigger the ban later. This is a known tactic to make the account unrecoverable or to punish the original owner for not 'dealing' with them."
                   },
                   {
                     "id": "all.ban.appeal",
                     "type": "action",
-                    "label": "Attempt to appeal the ban if offered",
-                    "detail": null
+                    "label": "Appeal the ban",
+                    "detail": "TBA"
                   },
                   {
                     "id": "all.ban.new-case",
                     "type": "action",
-                    "label": "Open a new case with consumer authorities",
-                    "detail": null
+                    "label": "Back to consumer affairs",
+                    "detail": "TBA"
                   },
                   {
                     "id": "all.ban.dates",
