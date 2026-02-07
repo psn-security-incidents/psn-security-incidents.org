@@ -447,19 +447,19 @@
                     "id": "all.wdw.handle",
                     "type": "warning",
                     "label": "Changing your handle to a non-valuable one",
-                    "detail": "The hacker doesn't necessarily want your handle — they want the account, its games, and its history."
+                    "detail": "Sony allow reversion back to the original, valuable, handle. This means your account will always be a target even if you change your PSN handle to a long one."
                   },
                   {
                     "id": "all.wdw.password",
                     "type": "warning",
                     "label": "Changing just your password",
-                    "detail": "If the hacker has already changed the email on the account, changing the password on what you think is your account may be changing it on a decoy account."
+                    "detail": "Your account was probably taken over without the hacker even knowing your password. A new password is insufficient security."
                   },
                   {
                     "id": "all.wdw.sms-2fa",
                     "type": "warning",
                     "label": "Adding back two-factor SMS login",
-                    "detail": "SMS-based 2FA can be bypassed through SIM swapping and social engineering. It's better than nothing but not sufficient as a sole security measure after a compromise."
+                    "detail": "SMS-based 2FA can be bypassed through SIM swapping or (more likely) social engineering using fragments of your identity, on a support call. It's better than nothing but not sufficient as a sole security measure after a compromise. Sony recommend a passkey over two-factor SMS."
                   }
                 ]
               }

@@ -44,7 +44,7 @@ export async function initFlowchart(containerId, dataUrl) {
     container.innerHTML = '';
 
     // Render the root node
-    const rootEl = renderNode(data.root, 0, 0);
+    const rootEl = renderNode(data.root, 0, 0, '');
     container.appendChild(rootEl);
 
     // Set up expand/collapse all
@@ -65,9 +65,10 @@ export async function initFlowchart(containerId, dataUrl) {
  * @param {object} node - The node data object
  * @param {number} depth - Current nesting depth
  * @param {number} index - Index among siblings (for step numbering)
+ * @param {string} treeNumber - Hierarchical tree number (e.g. "01.02.03")
  * @returns {HTMLElement}
  */
-function renderNode(node, depth, index) {
+function renderNode(node, depth, index, treeNumber) {
   const el = document.createElement('div');
   el.className = `flow-node flow-node--${node.type}`;
   el.dataset.nodeId = node.id;
@@ -75,7 +76,7 @@ function renderNode(node, depth, index) {
   el.dataset.expanded = 'false';
 
   // Build the card
-  const card = createCard(node, depth, index);
+  const card = createCard(node, depth, index, treeNumber);
   el.appendChild(card);
 
   // If node has children, add connector stub + children container
@@ -92,11 +93,14 @@ function renderNode(node, depth, index) {
     childrenEl.className = `flow-children flow-children--${mode}`;
 
     node.children.forEach((child, i) => {
+      const childNumber = treeNumber
+        ? `${treeNumber}.${String(i + 1).padStart(2, '0')}`
+        : String(i + 1).padStart(2, '0');
       // Insert OR divider between choice children
       if (mode === 'choice' && i > 0) {
         childrenEl.appendChild(createChoiceDivider());
       }
-      childrenEl.appendChild(renderNode(child, depth + 1, i));
+      childrenEl.appendChild(renderNode(child, depth + 1, i, childNumber));
     });
 
     el.appendChild(childrenEl);
@@ -114,7 +118,7 @@ function renderNode(node, depth, index) {
 /**
  * Creates the card element for a node.
  */
-function createCard(node, depth, index) {
+function createCard(node, depth, index, treeNumber) {
   const card = document.createElement('div');
   card.className = 'flow-card';
 
@@ -128,11 +132,14 @@ function createCard(node, depth, index) {
   icon.innerHTML = ICONS[node.type] || ICONS.info;
   header.appendChild(icon);
 
-  // Step number (only for sequential children)
-  if (depth > 0) {
+  // Step number (only for non-root nodes)
+  if (depth > 0 && treeNumber) {
     const step = document.createElement('span');
     step.className = 'flow-card__step';
-    step.textContent = `> ${String(index + 1).padStart(2, '0')}`;
+    // Show only the last two segments, prefixed with ">"
+    const parts = treeNumber.split('.');
+    const display = parts.slice(-2).join('.');
+    step.textContent = `> ${display}`;
     header.appendChild(step);
   }
 
@@ -184,6 +191,19 @@ function createCard(node, depth, index) {
       toggleDetail(nodeEl);
     }
   });
+
+  // Clicking the detail text also collapses it
+  if (hasDetail) {
+    const detail = card.querySelector('.flow-card__detail');
+    detail.addEventListener('click', () => {
+      const nodeEl = card.closest('.flow-node');
+      if (isSection) {
+        toggleSection(nodeEl);
+      } else {
+        toggleDetail(nodeEl);
+      }
+    });
+  }
 
   return card;
 }
@@ -246,10 +266,18 @@ function toggleSection(nodeEl) {
     childrenEl.classList.remove('flow-children--collapsed');
     if (stubEl) stubEl.style.display = '';
     if (badge) badge.textContent = 'hide';
+    // Also expand detail if present and not already showing
+    if (nodeEl.dataset.expanded === 'false' && nodeEl.querySelector('.flow-card__detail')) {
+      toggleDetail(nodeEl);
+    }
   } else {
     childrenEl.classList.add('flow-children--collapsed');
     if (stubEl) stubEl.style.display = 'none';
     if (badge) badge.textContent = 'show';
+    // Also collapse detail if expanded
+    if (nodeEl.dataset.expanded === 'true') {
+      toggleDetail(nodeEl);
+    }
   }
 }
 

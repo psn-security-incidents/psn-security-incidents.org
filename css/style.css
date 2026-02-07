@@ -148,7 +148,7 @@ body::after {
 }
 
 .flow-card__detail-inner {
-  padding: 0 1rem 0.75rem 2.875rem;
+  padding: 0 1rem 0.75rem 1rem;
   font-size: 0.8125rem;
   line-height: 1.65;
   color: #9ca3af;
