@@ -2,6 +2,7 @@ CLAUDE.md
 FLOW.md
 TODO.md
 INCIDENT-MODEL.md
+deploy.sh
 
 # Backend / Cloudflare Worker (separate deployment)
 api/
