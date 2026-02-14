@@ -64,7 +64,7 @@ async function loadEntries(container, token) {
 
   try {
     const data = await apiGet(`/report/entries?token=${encodeURIComponent(token)}`);
-    renderReport(container, token, data.entries);
+    renderReport(container, token, data.entries, data.contactable);
   } catch (err) {
     if (err instanceof ApiError && err.status === 401) {
       container.innerHTML = `
@@ -86,10 +86,19 @@ async function loadEntries(container, token) {
   }
 }
 
-function renderReport(container, token, entries) {
+function renderReport(container, token, entries, contactable) {
   const hasEntries = entries.length > 0;
 
   let html = '';
+
+  // Contactable status indicator
+  if (contactable) {
+    html += `
+      <div class="mb-6 flex items-center gap-2 text-xs font-mono text-gray-500">
+        <span class="w-2 h-2 rounded-full bg-terminal-green inline-block"></span>
+        You have opted in to be contacted by the site operator.
+      </div>`;
+  }
 
   // Jump link for returning users
   if (hasEntries) {

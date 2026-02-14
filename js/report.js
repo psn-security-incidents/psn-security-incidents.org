@@ -52,8 +52,10 @@ export function initReport() {
     submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
     status.classList.add('hidden');
 
+    const contactable = form.querySelector('#report-contactable')?.checked || false;
+
     try {
-      await apiPost('/report/request-link', { email });
+      await apiPost('/report/request-link', { email, contactable });
 
       status.textContent = 'Check your email for a link to your report. It may take a minute to arrive.';
       status.className = 'mt-3 text-xs font-mono text-terminal-green';
