@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSN Security Incidents</title>
+  <meta name="description" content="Community-driven consumer safety resource documenting online gaming account thefts through hacking, social engineering, and platform vulnerabilities.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'psn-blue': '#0070d1',
+            'psn-dark': '#0d1117',
+            'psn-surface': '#161b22',
+            'psn-border': '#30363d',
+            'terminal-green': '#39ff14',
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-psn-dark text-gray-200 min-h-screen font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="border-b border-psn-border bg-psn-surface/80 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="text-psn-blue font-mono font-bold tracking-wider text-lg hover:text-blue-400 transition-colors"
+         data-i18n="nav.site_name">
+        PSN Security Incidents
+      </a>
+      <div class="hidden md:flex items-center gap-5 text-sm font-mono">
+        <a href="/report.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.report">Report</a>
+        <a href="/how-it-happens.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.how_hacks">How Hacks Happen</a>
+        <a href="/support-visibility.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.support">Support Rep</a>
+        <a href="/account-recovery.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.recovery">Recovery Guide</a>
+        <a href="/incidents.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.incidents">Incidents</a>
+      </div>
+      <button id="nav-toggle" class="md:hidden text-gray-400 hover:text-terminal-green transition-colors focus:outline-none"
+              aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="nav-menu" class="hidden md:hidden border-t border-psn-border">
+      <div class="px-4 py-3 space-y-3 text-sm font-mono">
+        <a href="/report.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.report_full">Report an Incident</a>
+        <a href="/how-it-happens.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.how_hacks_full">How You Can Get Hacked</a>
+        <a href="/support-visibility.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.support_full">What Can a Support Rep See?</a>
+        <a href="/account-recovery.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.recovery_full">How to Respond to a Hack</a>
+        <a href="/incidents.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.incidents_full">High Profile and Selected Incidents</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="max-w-4xl mx-auto px-4 pt-16 md:pt-24 pb-12 text-center">
+    <h1 class="text-3xl md:text-5xl font-mono font-bold text-white mb-6 tracking-tight leading-tight">
+      <span class="text-terminal-green opacity-70">$ </span><span data-i18n="home.title">PSN Security Incidents</span>
+    </h1>
+    <p class="text-gray-400 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-8"
+       data-i18n="home.subtitle">
+      A community-driven resource documenting reported cases of online gaming account
+      theft through hacking, social engineering, and platform vulnerabilities.
+    </p>
+    <p class="text-gray-500 text-sm font-mono" data-i18n="home.cta">
+      <span class="text-psn-blue mr-1">></span>
+      Browse documented incidents, learn how attacks happen, or report your own experience anonymously.
+    </p>
+  </header>
+
+  <!-- Section Cards -->
+  <main class="max-w-5xl mx-auto px-4 pb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <!-- Report an Incident (primary CTA, full width) -->
+      <a href="/report.html"
+         class="md:col-span-2 group block bg-psn-surface border border-terminal-green/20 rounded-lg p-6
+                border-t-2 border-t-terminal-green hover:border-terminal-green/50
+                hover:shadow-lg hover:shadow-terminal-green/5 transition-all duration-200">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-terminal-green/10 flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-terminal-green" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"/>
+              <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-mono font-bold text-white text-lg mb-1.5 group-hover:text-terminal-green transition-colors"
+                data-i18n="home.report_title">
+              Report an Incident
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="home.report_desc">
+              Have you lost access to your gaming account? Submit an anonymous report to help
+              document the scope of this problem. Your identity is never published.
+            </p>
+          </div>
+          <svg class="w-5 h-5 text-gray-600 group-hover:text-terminal-green transition-colors flex-shrink-0 mt-1"
+               fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- How You Can Get Hacked -->
+      <a href="/how-it-happens.html"
+         class="group block bg-psn-surface border border-psn-border rounded-lg p-6
+                border-t-2 border-t-amber-500 hover:border-amber-500/50
+                hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-200">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-amber-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-mono font-bold text-white mb-1.5 group-hover:text-amber-400 transition-colors"
+                data-i18n="home.hacks_title">
+              How You Can Get Hacked
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="home.hacks_desc">
+              Understanding the attack vectors used to steal gaming accounts &mdash; from credential stuffing
+              and phishing to social engineering of platform support staff.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- What Can a Support Rep See? -->
+      <a href="/support-visibility.html"
+         class="group block bg-psn-surface border border-psn-border rounded-lg p-6
+                border-t-2 border-t-psn-blue hover:border-psn-blue/50
+                hover:shadow-lg hover:shadow-psn-blue/5 transition-all duration-200">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-psn-blue/10 flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-psn-blue" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-mono font-bold text-white mb-1.5 group-hover:text-blue-400 transition-colors"
+                data-i18n="home.support_title">
+              What Can a Support Rep See?
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="home.support_desc">
+              What information platform support agents can access about your account, and how
+              attackers exploit the support process to take over accounts.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- How to Respond to a Hack -->
+      <a href="/account-recovery.html"
+         class="group block bg-psn-surface border border-psn-border rounded-lg p-6
+                border-t-2 border-t-violet-500 hover:border-violet-500/50
+                hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-200">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-violet-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-mono font-bold text-white mb-1.5 group-hover:text-violet-400 transition-colors"
+                data-i18n="home.recovery_title">
+              How to Respond to a Hack
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="home.recovery_desc">
+              Step-by-step interactive guide for recovering a compromised account. Covers
+              initial response, contacting support, filing complaints, and securing your account.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- High Profile and Selected Incidents -->
+      <a href="/incidents.html"
+         class="group block bg-psn-surface border border-psn-border rounded-lg p-6
+                border-t-2 border-t-red-500 hover:border-red-500/50
+                hover:shadow-lg hover:shadow-red-500/5 transition-all duration-200">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-mono font-bold text-white mb-1.5 group-hover:text-red-400 transition-colors"
+                data-i18n="home.incidents_title">
+              High Profile and Selected Incidents
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="home.incidents_desc">
+              Notable public cases of gaming account theft or banning, revealing patterns in how
+              attacks occur and common issues reported during the recovery process.
+            </p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- About Section -->
+  <section class="border-t border-psn-border">
+    <div class="max-w-4xl mx-auto px-4 py-12">
+      <h2 class="font-mono font-bold text-white text-lg mb-4" data-i18n="home.about_title">
+        <span class="text-terminal-green opacity-70 mr-2">#</span>Why This Site Exists
+      </h2>
+      <p class="text-gray-400 text-sm leading-relaxed mb-3" data-i18n="home.about_p1">
+        Online gaming account thefts are a widespread and under-documented problem. Affected
+        users frequently report difficulties navigating support channels, unclear resolution
+        processes, and in some cases account bans triggered by actions taken while the
+        account was under unauthorised control.
+      </p>
+      <p class="text-gray-400 text-sm leading-relaxed mb-3" data-i18n="home.about_p2">
+        This site collects anonymous, user-submitted incident reports to document reported
+        experiences, identify patterns in how attacks occur, and provide actionable guidance
+        for affected users. No personal information is ever published.
+      </p>
+      <p class="text-gray-500 text-xs font-mono leading-relaxed" data-i18n="home.about_disclaimer">
+        This is an independent, community-driven consumer safety resource. It is not affiliated
+        with, endorsed by, or operated by Sony Interactive Entertainment Inc. or any of its
+        subsidiaries. "PlayStation", "PSN", and the PlayStation logos are registered trademarks
+        of Sony Interactive Entertainment Inc. All trademarks are the property of their
+        respective owners, used here solely for identification and commentary purposes under
+        nominative fair use.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-psn-border py-6 text-center text-gray-600 text-xs font-mono">
+    <span data-i18n="footer.site_name">psn-security-incidents.org</span>
+  </footer>
+
+  <script type="module">
+    import { initNav } from './js/nav.js';
+    import { initI18n } from './js/i18n.js';
+    initNav();
+    initI18n();
+  </script>
+</body>
+</html>

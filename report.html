@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report — PSN Security Incidents</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'psn-blue': '#0070d1',
+            'psn-dark': '#0d1117',
+            'psn-surface': '#161b22',
+            'psn-border': '#30363d',
+            'terminal-green': '#39ff14',
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-psn-dark text-gray-200 min-h-screen font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="border-b border-psn-border bg-psn-surface/80 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="text-psn-blue font-mono font-bold tracking-wider text-lg hover:text-blue-400 transition-colors"
+         data-i18n="nav.site_name">
+        PSN Security Incidents
+      </a>
+      <div class="hidden md:flex items-center gap-5 text-sm font-mono">
+        <a href="/report.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.report">Report</a>
+        <a href="/how-it-happens.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.how_hacks">How Hacks Happen</a>
+        <a href="/support-visibility.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.support">Support Rep</a>
+        <a href="/account-recovery.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.recovery">Recovery Guide</a>
+        <a href="/incidents.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.incidents">Incidents</a>
+      </div>
+      <button id="nav-toggle" class="md:hidden text-gray-400 hover:text-terminal-green transition-colors focus:outline-none"
+              aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="nav-menu" class="hidden md:hidden border-t border-psn-border">
+      <div class="px-4 py-3 space-y-3 text-sm font-mono">
+        <a href="/report.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.report_full">Report an Incident</a>
+        <a href="/how-it-happens.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.how_hacks_full">How You Can Get Hacked</a>
+        <a href="/support-visibility.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.support_full">What Can a Support Rep See?</a>
+        <a href="/account-recovery.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.recovery_full">How to Respond to a Hack</a>
+        <a href="/incidents.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.incidents_full">High Profile and Selected Incidents</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="max-w-4xl mx-auto px-4 pt-8 pb-2">
+    <h1 class="text-2xl md:text-3xl font-mono font-bold text-white mb-3 tracking-tight">
+      <span class="text-terminal-green opacity-70 mr-2">$</span>Report
+    </h1>
+
+    <!-- Toggle -->
+    <div class="flex gap-1 bg-psn-dark border border-psn-border rounded-lg p-1 max-w-md mb-5">
+      <button id="toggle-incident" type="button"
+              class="flex-1 px-3 py-2 text-xs font-mono font-medium rounded-md transition-colors
+                     bg-psn-blue text-white">
+        Report an Incident
+      </button>
+      <button id="toggle-tip" type="button"
+              class="flex-1 px-3 py-2 text-xs font-mono font-medium rounded-md transition-colors
+                     text-gray-400 hover:text-gray-200">
+        Report a Tip on the Hacker(s)
+      </button>
+    </div>
+
+    <p id="report-intro" class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">
+      Submit an anonymous report of your PSN account theft. Especially if the account was protected by two-factor either SMS or passkey. You do not need to reveal your PSN Id, email, or anything else private. Stories are reviewed and if the details add up, they will be published in the Incidents page, suitably anonymized.
+    </p>
+  </header>
+
+  <!-- Report Form Entry -->
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <div class="bg-psn-surface border border-psn-border rounded-lg p-6 md:p-8">
+
+      <p class="text-gray-400 text-sm leading-relaxed mb-6">
+        To begin, enter your email address below. We will email you a unique link you can
+        use to enter information. Your email is used only for this purpose and is never
+        published.
+      </p>
+
+      <p class="text-gray-500 text-sm leading-relaxed mb-8">
+        Returning user? Return to the data you've submitted by getting a new one-time link.
+      </p>
+
+      <form id="report-email-form" class="max-w-md">
+        <label for="report-email" class="block text-xs font-mono font-medium text-gray-400 mb-2">
+          Email Address
+        </label>
+        <div class="flex gap-3">
+          <input type="email" id="report-email" name="email" required
+                 placeholder="you@example.com"
+                 class="flex-1 bg-psn-dark border border-psn-border rounded px-4 py-2.5
+                        text-sm text-gray-200 font-mono placeholder-gray-600
+                        focus:outline-none focus:border-psn-blue focus:ring-1 focus:ring-psn-blue/50
+                        transition-colors">
+          <button type="submit"
+                  class="px-5 py-2.5 bg-psn-blue text-white text-sm font-mono font-medium rounded
+                         hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-psn-blue/50
+                         transition-colors flex-shrink-0">
+            Send Link
+          </button>
+        </div>
+        <p id="report-email-status" class="mt-3 text-xs font-mono hidden"></p>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-psn-border py-6 text-center text-gray-600 text-xs font-mono">
+    <span data-i18n="footer.site_name">psn-security-incidents.org</span>
+  </footer>
+
+  <script type="module">
+    import { initNav } from './js/nav.js';
+    import { initI18n } from './js/i18n.js';
+    import { initReport } from './js/report.js';
+    initNav();
+    initI18n();
+    initReport();
+  </script>
+</body>
+</html>

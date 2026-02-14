@@ -2,3 +2,23 @@ CLAUDE.md
 FLOW.md
 TODO.md
 INCIDENT-MODEL.md
+
+# Backend / Cloudflare Worker (separate deployment)
+api/
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor swap files
+*.swp
+*.swo
+*~
+
+# Environment / secrets
+.env
+.env.*
+.dev.vars

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Your Report — PSN Security Incidents</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'psn-blue': '#0070d1',
+            'psn-dark': '#0d1117',
+            'psn-surface': '#161b22',
+            'psn-border': '#30363d',
+            'terminal-green': '#39ff14',
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-psn-dark text-gray-200 min-h-screen font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="border-b border-psn-border bg-psn-surface/80 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="text-psn-blue font-mono font-bold tracking-wider text-lg hover:text-blue-400 transition-colors"
+         data-i18n="nav.site_name">
+        PSN Security Incidents
+      </a>
+      <div class="hidden md:flex items-center gap-5 text-sm font-mono">
+        <a href="/report.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.report">Report</a>
+        <a href="/how-it-happens.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.how_hacks">How Hacks Happen</a>
+        <a href="/support-visibility.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.support">Support Rep</a>
+        <a href="/account-recovery.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.recovery">Recovery Guide</a>
+        <a href="/incidents.html" class="text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.incidents">Incidents</a>
+      </div>
+      <button id="nav-toggle" class="md:hidden text-gray-400 hover:text-terminal-green transition-colors focus:outline-none"
+              aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="nav-menu" class="hidden md:hidden border-t border-psn-border">
+      <div class="px-4 py-3 space-y-3 text-sm font-mono">
+        <a href="/report.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.report_full">Report an Incident</a>
+        <a href="/how-it-happens.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.how_hacks_full">How You Can Get Hacked</a>
+        <a href="/support-visibility.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.support_full">What Can a Support Rep See?</a>
+        <a href="/account-recovery.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.recovery_full">How to Respond to a Hack</a>
+        <a href="/incidents.html" class="block text-gray-400 hover:text-terminal-green transition-colors"
+           data-i18n="nav.incidents_full">High Profile and Selected Incidents</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="max-w-4xl mx-auto px-4 pt-8 pb-2">
+    <h1 class="text-2xl md:text-3xl font-mono font-bold text-white mb-3 tracking-tight"
+        data-i18n="status.title">
+      <span class="text-terminal-green opacity-70 mr-2">$</span>Your Report
+    </h1>
+    <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl"
+       data-i18n="status.intro">
+      Add details about your incident below. Each entry is timestamped and stored
+      securely. You can return to this page any time your link is active.
+    </p>
+  </header>
+
+  <!-- Dynamic Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <div id="status-content">
+      <div class="text-center py-12">
+        <p class="text-gray-400 font-mono text-sm">Loading...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-psn-border py-6 text-center text-gray-600 text-xs font-mono">
+    <span data-i18n="footer.site_name">psn-security-incidents.org</span>
+  </footer>
+
+  <script type="module">
+    import { initNav } from './js/nav.js';
+    import { initI18n } from './js/i18n.js';
+    import { initStatus } from './js/status.js';
+    initNav();
+    initI18n();
+    initStatus();
+  </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+  "incidents": [
+    {
+      "id": "dav1d-123",
+      "date": "2025-10-08",
+      "headline": "#1 PSN trophy hunter worldwide gets hacked and his account listed on Telegram for sale",
+      "handle": "dav1d_123",
+      "detail": "The hacker changed his PSN ID to \"Zzyuj\" and privated all trophies and games. Two-step verification was active on the account at the time of the compromise. The community noted that Sony had similarly failed to help in the prior case of Hakoom, another high-profile trophy hunter.",
+      "outcome": {
+        "status": "unknown",
+        "summary": null
+      },
+      "tags": ["high-profile", "handle-theft", "2fa-bypass", "account-sale"],
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/Trophies/comments/1o2jp3e/other_the_1_psn_trophy_hunter_in_the_world_dav1d/",
+          "platform": "reddit",
+          "title": "The #1 PSN trophy hunter in the world (dav1d_123) got hacked",
+          "date": "2025-10-08"
+        },
+        {
+          "url": "https://x.com/RobThanatos/status/1975751947811450916",
+          "platform": "x",
+          "title": "RobThanatos on the dav1d_123 hack",
+          "date": null
+        }
+      ]
+    },
+    {
+      "id": "2fa-off-bbb-resolved",
+      "date": "2025-05",
+      "headline": "Account hacked, 2FA turned off, email changed — support says account is \"protected\" and no changes can be made",
+      "handle": null,
+      "detail": "User received a text saying two-factor authentication had been turned off, followed minutes later by an email confirming the account's sign-on email had been changed. Both online chat and phone support stated the account was now \"protected\" and for security reasons no further changes could be made — effectively locking the owner out of all purchased games with no path to recovery. Support described as \"shockingly unhelpful\", telling the user there was \"nothing they could do.\"",
+      "outcome": {
+        "status": "resolved",
+        "summary": "Filing a complaint with the BBB resulted in a callback. The user was asked a series of security questions and the account was restored."
+      },
+      "tags": ["2fa-disabled", "email-changed", "account-locked", "support-refused", "bbb-resolved"],
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/playstation/comments/1klqykp/account_hacked_2fa_turned_off_email_sign_on/",
+          "platform": "reddit",
+          "title": "Account Hacked, 2FA turned off, email sign on changed, support can't make changes",
+          "date": "2025-05"
+        }
+      ]
+    },
+    {
+      "id": "repeat-hacked-with-2fa",
+      "date": "2025-09",
+      "headline": "Account hacked 10 times in 14 months despite 2FA, passkeys, and strong security practices",
+      "handle": null,
+      "detail": "User reports being hacked approximately 10 times in 14 months despite having 2FA active, passkeys tied to fingerprint, unique complex passwords across all accounts, no payment card on file, private home wifi only, and no use of public networks. Single-player only, no online gaming. 12 years of purchases and data on the account. Usually catches the breach immediately via Sony's email-changed notification, but was working in the field when the latest compromise occurred and came home to find the account locked out. Sony support was closed at the time.",
+      "outcome": {
+        "status": "unknown",
+        "summary": null
+      },
+      "tags": ["2fa-bypass", "passkey-bypass", "repeat-victim", "email-changed", "strong-security"],
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/PS5HelpSupport/comments/1n8tj1h/playstation_account_hacked_again_with_2fa/",
+          "platform": "reddit",
+          "title": "Playstation Account Hacked - AGAIN. WITH 2FA",
+          "date": "2025-09"
+        }
+      ]
+    },
+    {
+      "id": "hacked-4x-via-support",
+      "date": "2024-11",
+      "headline": "Account hacked 4 times via customer support social engineering — support eventually refuses recovery",
+      "handle": null,
+      "detail": "User reports account compromised four times, each following the same pattern: 2FA removed (despite being set up via authenticator app with locally stored backups) and email changed. No failed login attempt notifications were ever received, indicating the breaches were carried out through customer support rather than credential attacks. Hacks always occurred during US support hours while the user was asleep overseas. After the third incident, the user asked support to flag the account to prevent further email changes — they said they thought they could. The fourth hack happened anyway. On attempting recovery, support refused and told the user the account now belonged to someone else.",
+      "outcome": {
+        "status": "unresolved",
+        "summary": "Support refused to restore the account after the fourth compromise, stating it now belonged to the hacker."
+      },
+      "tags": ["support-engineering", "2fa-bypass", "repeat-victim", "email-changed", "support-refused", "account-lost"],
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/playstation/comments/1gu1kib/account_hacked_4_times_through_customer_support/",
+          "platform": "reddit",
+          "title": "Account Hacked 4 Times through Customer Support",
+          "date": "2024-11"
+        }
+      ]
+    },
+    {
+      "id": "numerama-lellouche",
+      "date": "2025-12-22",
+      "headline": "French tech journalist hacked twice in 3 hours despite passkey and 2FA — documents the exact support vulnerability",
+      "handle": "LellNico",
+      "detail": "Nicolas Lellouche, a journalist at Numerama, had his account stolen twice on the same day despite using passkeys (Face ID), 2FA via authenticator, and a password manager. The hacker (\"Derol Bodden\") contacted him and explained the method: Sony support will transfer full account ownership to anyone who provides the PSN username and any old transaction number — no password, no 2FA check, no identity verification. The transaction number came from a screenshot in a 2023 Numerama article. On the first call to Sony, the agent asked only for the PSN username and a transaction number from any year, then handed back the account in under five minutes. 36 minutes after recovery, the hacker stole it again using the same method. Sony's chat support gave scripted responses and refused to escalate. A second phone agent finally asked proper identity questions (date of birth, original email, original username), proving Sony has the capability but does not enforce it. Sony told Lellouche he should not have published the transaction number and that there is no way to invalidate old transaction IDs. Telegram groups dedicated to mass account theft using this method were identified. The hacker told Lellouche he targeted the account at random looking for a specific game.",
+      "outcome": {
+        "status": "resolved",
+        "summary": "Account eventually recovered after a more detailed verification process that included personal identity questions. The initial 5-10 day investigation with a \"code red\" flag was followed by a more arduous recovery requiring verification of personal information to prevent the hacker from reclaiming it again."
+      },
+      "tags": ["high-profile", "journalist", "passkey-bypass", "2fa-bypass", "support-engineering", "transaction-id-exploit", "repeat-hack", "vulnerability-disclosure", "telegram-rings"],
+      "sources": [
+        {
+          "url": "https://www.numerama.com/cyberguerre/2147695-je-me-suis-fait-pirater-mon-compte-playstation-et-jai-decouvert-un-enorme-probleme-de-securite-chez-sony.html",
+          "platform": "news",
+          "title": "Numerama — Je me suis fait pirater mon compte PlayStation (original report)",
+          "date": "2025-12-23"
+        },
+        {
+          "url": "https://ixbt.games/en/news/2025/12/23/zurnalist-soobshhil-o-kriticeskoi-uiazvimosti-playstation-kotoraia-pozvoliaet-ugoniat-akkaunty-daze-s-dvuxfaktornoi-autentifikaciei.html",
+          "platform": "news",
+          "title": "ixbt.games — Journalist reports critical PlayStation vulnerability",
+          "date": "2025-12-23"
+        }
+      ]
+    },
+    {
+      "id": "post-hack-ban-chargeback",
+      "date": "2024-05",
+      "headline": "Account suspended for 5+ months after hack — bank chargeback conflicts with Sony refund, thousands of dollars in games inaccessible",
+      "handle": null,
+      "detail": "User's account was hacked and unauthorised purchases were made on their card. They disputed the charges with their bank and contacted Sony support, who helped recover the account and refund the hacker's purchases. However, the bank chargeback conflicted with Sony's refund, resulting in an account suspension. Despite reversing the bank claim and funds being removed from their account in January, Sony refused to lift the suspension for over five months. The user had thousands of hours across games like Dark Souls 3, Destiny, and ESO, and thousands of dollars in digital purchases — all inaccessible. The account dated back to PS3 era. 2FA was not enabled at the time of the hack. The user has since built a PC and moved away from the platform, stating they no longer trust Sony with these issues.",
+      "outcome": {
+        "status": "banned",
+        "summary": "Account remained suspended for over 5 months despite the bank claim reversal. User abandoned the platform and moved to PC."
+      },
+      "tags": ["post-hack-ban", "chargeback-conflict", "account-suspended", "digital-library-lost", "support-refused", "platform-abandonment"],
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/Helldivers/comments/1cjycxo/my_psn_account_was_suspended_after_i_got_hacked/",
+          "platform": "reddit",
+          "title": "My PSN account was suspended after I got hacked. How am I supposed to play?",
+          "date": "2024-05"
+        }
+      ]
+    }
+  ]
+}

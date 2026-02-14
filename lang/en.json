@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "site_name": "PSN Security Incidents",
+    "report": "Report",
+    "report_full": "Report an Incident",
+    "how_hacks": "How Hacks Happen",
+    "how_hacks_full": "How You Can Get Hacked",
+    "support": "Support Rep",
+    "support_full": "What Can a Support Rep See?",
+    "recovery": "Recovery Guide",
+    "recovery_full": "How to Respond to a Hack",
+    "incidents": "Incidents",
+    "incidents_full": "High Profile and Selected Incidents"
+  },
+  "home": {
+    "title": "PSN Security Incidents",
+    "subtitle": "Documenting past and ongoing loss of PlayStation Network gaming accounts through hacking, social engineering of support staff, and exploitation of platform vulnerabilities.",
+    "cta": "> Browse documented incidents, learn how attacks happen, or report your own experience anonymously.",
+    "report_title": "Report an Incident",
+    "report_desc": "Have you lost access to your PSN account? Submit an anonymous report to help document the scope of this problem. Your identity is never published.",
+    "hacks_title": "How You Can Get Hacked",
+    "hacks_desc": "Understanding the attack vectors used to steal PSN accounts — from credential stuffing and phishing to social engineering of PlayStation support.",
+    "support_title": "What Can a Support Rep See?",
+    "support_desc": "What information PlayStation support agents can access about your account, and how attackers exploit the support process to take over accounts.",
+    "recovery_title": "How to Respond to a Hack",
+    "recovery_desc": "Step-by-step interactive guide for recovering a compromised account. Covers initial response, contacting Sony, filing complaints, and securing your account.",
+    "incidents_title": "High Profile and Selected Incidents",
+    "incidents_desc": "Notable documented cases of PSN account theft, revealing patterns in how attacks occur and systemic issues in Sony's response process.",
+    "about_title": "# Why This Site Exists",
+    "about_p1": "PlayStation Network account thefts are a widespread problem that Sony has been slow to address. Victims frequently report that support channels are inadequate, resolution processes are opaque, and recovered accounts are subsequently banned due to actions taken by the hackers.",
+    "about_p2": "This site collects anonymous incident reports to document the scale of the problem, identify patterns in how attacks occur, and provide actionable guidance for victims. No personal information is ever published.",
+    "about_disclaimer": "This is an independent consumer safety resource. It is not affiliated with, endorsed by, or operated by Sony Interactive Entertainment."
+  },
+  "footer": {
+    "site_name": "psn-security-incidents.org"
+  },
+  "stub": {
+    "coming_soon": "Coming Soon",
+    "under_construction": "This section is under construction.",
+    "back_home": "Back to Home"
+  },
+  "report": {
+    "title": "Report an Incident",
+    "intro": "Submit an anonymous report of your PSN account theft. Especially if the account was protected by two-factor either SMS or passkey. You do not need to reveal your PSN Id, email, or anything else private. Stories are reviewed and if the details add up, they will be published in the Incidents page, suitably anonymized."
+  },
+  "how_hacks": {
+    "title": "How You Can Get Hacked",
+    "intro": "Understanding the attack vectors used to steal PlayStation Network accounts."
+  },
+  "support": {
+    "title": "What Can a Support Rep See?",
+    "intro": "What PlayStation support agents can access, and how the support process is exploited."
+  },
+  "incidents": {
+    "title": "High Profile and Selected Incidents",
+    "intro": "Case summaries of PSN account theft and two-factor removals."
+  },
+  "recovery": {
+    "title": "Account Recovery Guide",
+    "intro": "Interactive step-by-step guide for recovering a compromised PlayStation Network account. Click any step to expand detailed instructions."
+  },
+  "status": {
+    "title": "Your Report",
+    "intro": "Add details about your incident below. Each entry is timestamped and stored securely. You can return to this page any time your link is active."
+  }
+}

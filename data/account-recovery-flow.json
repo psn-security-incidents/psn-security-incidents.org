@@ -43,18 +43,6 @@
                     "type": "warning",
                     "label": "Do NOT reply to the hacker",
                     "detail": "They can use your conversation against you. Any communication can be twisted to make it appear you voluntarily transferred or sold the account."
-                  },
-                  {
-                    "id": "hacked.with-contact.search",
-                    "type": "action",
-                    "label": "Search for your account being sold online",
-                    "detail": "You can search on Instagram or elsewhere for account sales to identify if your account is being listed for sale. Screenshot any listings you find."
-                  },
-                  {
-                    "id": "hacked.with-contact.dont-panic",
-                    "type": "info",
-                    "label": "Do not panic",
-                    "detail": "The hacker can contact you from what they obtain from your account. It does not mean they know all about your digital life. Their knowledge is limited to what was on the PSN account."
                   }
                 ]
               },
@@ -65,12 +53,6 @@
                 "detail": "The hacker has not reached out (yet). This may happen, he may wish to 'make it official' because 'you cannot get it back'. Do not engage in a conversation.",
                 "childMode": "sequential",
                 "children": [
-                  {
-                    "id": "hacked.no-contact.search",
-                    "type": "action",
-                    "label": "Search for your account being sold online",
-                    "detail": "If your account is valuable (3 or 4 letters) you can search on social media for PSN account sales ads to identify if your account has been listed for sale. Screenshot any listings."
-                  }
                 ]
               }
             ]
@@ -142,8 +124,8 @@
               {
                 "id": "all.call-sony",
                 "type": "section",
-                "label": "Call Sony support",
-                "detail": "Sony support is not 24/7, call PSN country support (this may not be your local Sony support if your PSN account was out of region) during their hours and inform them your account has been hacked. Be prepared for this call to be difficult — but it creates an important record.",
+                "label": "Contact Sony support",
+                "detail": "Start a chat session or call Sony support. Hours are not 24/7, call PSN country support (this may not be your local Sony support if your PSN account was out of region) during their hours and inform them you suspect your account has been hacked:",
                 "childMode": "sequential",
                 "children": [
                   {
@@ -190,13 +172,13 @@
                         "id": "all.consumer-authorities.us",
                         "type": "action",
                         "label": "US — Report to the BBB",
-                        "detail": "For US/PSN region, file a complaint with the Better Business Bureau (BBB). Sony tends to respond to BBB complaints with more urgency than direct support requests."
+                        "detail": "File a complaint with the Better Business Bureau (BBB). Sony tends to respond to BBB complaints with more urgency than direct support requests."
                       },
                       {
                         "id": "all.consumer-authorities.au",
                         "type": "action",
-                        "label": "Australia — Report to consumer affairs",
-                        "detail": "For Australian, file a complaint with the ACCC. Do this even if your account is out of region."
+                        "label": "Australia — Report to Fair Trading",
+                        "detail": "File a complaint with Fair Trading (NSW) or similar. Even if your account is not Aus/NZ, do this as you are an australian resident customer."
                       },
                       {
                         "id": "all.consumer-authorities.eu",
@@ -354,32 +336,20 @@
                     "id": "all.resolution.unsuccessful",
                     "type": "section",
                     "label": "Resolution unsuccessful",
-                    "detail": "Sony may say they cannot recover the account — for example, if you have no access to your original email anymore. You will need to escalate further.",
+                    "detail": "Sony may reject the case. For the BBB that will be communicated by an emailed event from the BBB saying this and checking off a reason.",
                     "childMode": "sequential",
                     "children": [
                       {
                         "id": "all.resolution.unsuccessful.reopen",
                         "type": "action",
                         "label": "Refresh the consumer complaint",
-                        "detail": "The original consumer complaint may have been closed by Sony. Re-open it"
-                      },
-                      {
-                        "id": "all.resolution.unsuccessful.detail",
-                        "type": "action",
-                        "label": "Detail the unsatisfactory resolution",
-                        "detail": "Explain what Sony told you and why it's unacceptable."
+                        "detail": "Re-open the case, but provide more complete informaton."
                       },
                       {
                         "id": "all.resolution.unsuccessful.docs",
                         "type": "action",
                         "label": "Include more documentation of account ownership",
                         "detail": "Provide any additional proof that you own the account — older purchase receipts, trophy history screenshots, etc."
-                      },
-                      {
-                        "id": "all.resolution.unsuccessful.prompt",
-                        "type": "info",
-                        "label": "Sufficient documentation may prompt another attempt",
-                        "detail": "If you've documented the problem sufficiently, it may prompt another go at resolution with you."
                       }
                     ]
                   }
@@ -396,7 +366,7 @@
                     "id": "all.ban.strategy",
                     "type": "info",
                     "label": "A hacker time-bomb",
-                    "detail": "The hacker sent abusive content from your PSN account to other accounts they control, in order to trigger the ban later. This is a known tactic to make the account unrecoverable or to punish the original owner for not 'dealing' with them."
+                    "detail": "The hacker sent abusive content from your PSN account to other accounts they control in order to trigger the ban later. This is a tactic to make the account perma-banned to punish the original owner for not 'dealing'. They may report your account repeatedly over 30, 60 and beyond day periods to generate escalating bans."
                   },
                   {
                     "id": "all.ban.appeal",
