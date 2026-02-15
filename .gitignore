@@ -19,6 +19,9 @@ Thumbs.db
 *.swo
 *~
 
+# Admin dashboard (localhost only, never deployed)
+admin/
+
 # Environment / secrets
 .env
 .env.*

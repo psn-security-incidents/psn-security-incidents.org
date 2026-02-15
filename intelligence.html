@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>High Profile and Selected Incidents — PSN Security Incidents</title>
+  <title>Intelligence — PSN Security Incidents</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -79,20 +79,27 @@
   <!-- Page Header -->
   <header class="max-w-4xl mx-auto px-4 pt-8 pb-2">
     <h1 class="text-2xl md:text-3xl font-mono font-bold text-white mb-3 tracking-tight"
-        data-i18n="incidents.title">
-      <span class="text-terminal-green opacity-70 mr-2">$</span>High Profile and Selected Incidents
+        data-i18n="intelligence.title">
+      <span class="text-terminal-green opacity-70 mr-2">$</span>Intelligence
     </h1>
     <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl"
-       data-i18n="incidents.intro">
-      Case summaries of PSN account theft and two-factor removals.
+       data-i18n="intelligence.intro">
+      Curated information on the individuals and methods behind PSN account thefts. Screenshots, communications, and analysis contributed by the community.
+    </p>
+    <p class="mt-4">
+      <a href="/report.html"
+         class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:text-green-300 transition-colors"
+         data-i18n="intelligence.cta">
+        <span>></span> Have information? Submit it anonymously via the Report page.
+      </a>
     </p>
   </header>
 
-  <!-- Incidents Feed -->
+  <!-- Intelligence Feed -->
   <main class="max-w-4xl mx-auto px-4 py-8">
-    <div id="incidents-feed" class="space-y-4">
+    <div id="intelligence-feed" class="space-y-6">
       <div class="text-center text-gray-500 py-12">
-        <span class="font-mono animate-pulse">Loading incidents<span>...</span></span>
+        <span class="font-mono animate-pulse">Loading intelligence<span>...</span></span>
       </div>
     </div>
   </main>
@@ -105,10 +112,10 @@
   <script type="module">
     import { initNav } from './js/nav.js';
     import { initI18n } from './js/i18n.js';
-    import { initIncidents } from './js/incidents.js';
+    import { initIntelligence } from './js/intelligence.js';
     initNav();
     initI18n();
-    initIncidents('incidents-feed', './data/incidents.json');
+    initIntelligence('intelligence-feed', './data/intelligence.json', './img/intelligence');
   </script>
 </body>
 </html>

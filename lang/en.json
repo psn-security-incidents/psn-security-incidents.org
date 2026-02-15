@@ -10,7 +10,9 @@
     "recovery": "Recovery Guide",
     "recovery_full": "How to Respond to a Hack",
     "incidents": "Incidents",
-    "incidents_full": "High Profile and Selected Incidents"
+    "incidents_full": "High Profile and Selected Incidents",
+    "intelligence": "Intelligence",
+    "intelligence_full": "Intelligence on PSN Hackers"
   },
   "home": {
     "title": "PSN Security Incidents",
@@ -26,6 +28,8 @@
     "recovery_desc": "Step-by-step interactive guide for recovering a compromised account. Covers initial response, contacting Sony, filing complaints, and securing your account.",
     "incidents_title": "High Profile and Selected Incidents",
     "incidents_desc": "Notable documented cases of PSN account theft, revealing patterns in how attacks occur and systemic issues in Sony's response process.",
+    "intelligence_title": "Intelligence",
+    "intelligence_desc": "Curated information on the individuals and methods behind PSN account thefts, including screenshots and community-contributed analysis.",
     "about_title": "# Why This Site Exists",
     "about_p1": "PlayStation Network account thefts are a widespread problem that Sony has been slow to address. Victims frequently report that support channels are inadequate, resolution processes are opaque, and recovered accounts are subsequently banned due to actions taken by the hackers.",
     "about_p2": "This site collects anonymous incident reports to document the scale of the problem, identify patterns in how attacks occur, and provide actionable guidance for victims. No personal information is ever published.",
@@ -54,6 +58,11 @@
   "incidents": {
     "title": "High Profile and Selected Incidents",
     "intro": "Case summaries of PSN account theft and two-factor removals."
+  },
+  "intelligence": {
+    "title": "Intelligence",
+    "intro": "Curated information on the individuals and methods behind PSN account thefts. Screenshots, communications, and analysis contributed by the community.",
+    "cta": "> Have information? Submit it anonymously via the Report page."
   },
   "recovery": {
     "title": "Account Recovery Guide",
