@@ -37,11 +37,11 @@ function renderIncident(incident) {
   const sourcesHtml = incident.sources.map(s => {
     const label = PLATFORM_LABELS[s.platform] || 'Link';
     return `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-1.5 text-xs font-mono px-2.5 py-1 rounded
-                      border border-psn-border text-gray-400 hover:text-psn-blue hover:border-psn-blue/50
+               class="inline-flex items-center gap-1.5 text-sm font-mono px-3 py-1.5 rounded
+                      border border-psn-blue/40 bg-psn-blue/10 text-psn-blue hover:bg-psn-blue/20 hover:border-psn-blue/60
                       transition-colors">
               <span>${escapeHtml(label)}</span>
-              <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
               </svg>
@@ -62,17 +62,17 @@ function renderIncident(incident) {
       </span>
     </div>
     <div class="px-5 py-4">
-      <h3 class="font-mono font-bold text-white text-sm md:text-base leading-snug mb-3">
+      <h3 class="font-mono font-bold text-white text-sm md:text-base leading-snug mb-2">
         ${escapeHtml(incident.headline)}
       </h3>
-      ${incident.handle ? `<p class="text-xs font-mono text-psn-blue mb-3">Account: ${escapeHtml(incident.handle)}</p>` : ''}
+      ${incident.handle ? `<p class="text-xs font-mono text-psn-blue mb-2">Account: ${escapeHtml(incident.handle)}</p>` : ''}
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        ${sourcesHtml}
+      </div>
       <p class="text-gray-400 text-sm leading-relaxed mb-4">
         ${escapeHtml(incident.detail)}
       </p>
       ${incident.outcome?.summary ? `<p class="text-gray-500 text-sm leading-relaxed mb-4"><strong class="text-gray-300">Outcome:</strong> ${escapeHtml(incident.outcome.summary)}</p>` : ''}
-      <div class="flex flex-wrap items-center gap-2 mb-3">
-        ${sourcesHtml}
-      </div>
       <div class="flex flex-wrap gap-2">
         ${tagsHtml}
       </div>
