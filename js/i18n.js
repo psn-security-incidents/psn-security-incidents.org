@@ -12,7 +12,8 @@
  * data-i18n="key.path" have their textContent replaced.
  */
 
-const SUPPORTED = ['en', 'ja', 'es', 'pt-br', 'de', 'fr'];
+const SUPPORTED = ['en', 'ja', 'es', 'pt-br', 'de', 'fr', 'ar'];
+const RTL_LANGS = ['ar'];
 
 let currentLang = 'en';
 let translations = {};
@@ -82,6 +83,7 @@ export async function setLanguage(lang) {
   translations = await loadTranslations(lang);
   applyTranslations();
   document.documentElement.lang = lang;
+  document.documentElement.dir = RTL_LANGS.includes(lang) ? 'rtl' : 'ltr';
 }
 
 /**

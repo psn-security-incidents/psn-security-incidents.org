@@ -43,6 +43,10 @@ export async function initFlowchart(containerId, dataUrl) {
     // Clear loading indicator
     container.innerHTML = '';
 
+    // Flowchart content is English-only; force LTR to avoid RTL layout issues
+    container.dir = 'ltr';
+    container.style.textAlign = 'left';
+
     // Render the root node
     const rootEl = renderNode(data.root, 0, 0, '');
     container.appendChild(rootEl);
