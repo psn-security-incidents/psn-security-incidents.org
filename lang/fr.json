@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "site_name": "Incidents de sécurité PSN",
+    "report": "Signaler",
+    "report_full": "Signaler un incident",
+    "how_hacks": "Comment ça arrive",
+    "how_hacks_full": "Comment on peut se faire pirater",
+    "support": "Agent support",
+    "support_full": "Que voit un agent du support ?",
+    "recovery": "Guide de récupération",
+    "recovery_full": "Comment réagir à un piratage",
+    "incidents": "Incidents",
+    "incidents_full": "Incidents majeurs et sélectionnés",
+    "intelligence": "Renseignements",
+    "intelligence_full": "Renseignements sur les pirates PSN"
+  },
+  "home": {
+    "title": "Incidents de sécurité PSN",
+    "subtitle": "Documentation des pertes de comptes PlayStation Network par piratage, ingénierie sociale auprès du support, et exploitation de vulnérabilités de la plateforme.",
+    "cta": "> Parcourez les incidents documentés, découvrez comment les attaques se produisent, ou signalez votre propre expérience de manière anonyme.",
+    "report_title": "Signaler un incident",
+    "report_desc": "Vous avez perdu l'accès à votre compte PSN ? Soumettez un signalement anonyme pour aider à documenter l'ampleur du problème. Votre identité n'est jamais publiée.",
+    "hacks_title": "Comment on peut se faire pirater",
+    "hacks_desc": "Comprendre les vecteurs d'attaque utilisés pour voler des comptes PSN — du bourrage d'identifiants et phishing à l'ingénierie sociale du support PlayStation.",
+    "support_title": "Que voit un agent du support ?",
+    "support_desc": "Quelles informations les agents du support PlayStation peuvent consulter sur votre compte, et comment les attaquants exploitent le processus de support pour prendre le contrôle de comptes.",
+    "recovery_title": "Comment réagir à un piratage",
+    "recovery_desc": "Guide interactif étape par étape pour récupérer un compte compromis. Couvre la réaction initiale, contacter Sony, déposer des réclamations, et sécuriser votre compte.",
+    "incidents_title": "Incidents majeurs et sélectionnés",
+    "incidents_desc": "Cas documentés notables de vol de comptes PSN, révélant des schémas dans la façon dont les attaques se produisent et des problèmes systémiques dans la réponse de Sony.",
+    "intelligence_title": "Renseignements",
+    "intelligence_desc": "Informations sélectionnées sur les individus et méthodes derrière les vols de comptes PSN, y compris des captures d'écran et des analyses de la communauté.",
+    "about_title": "# Pourquoi ce site existe",
+    "about_p1": "Le vol de comptes PlayStation Network est un problème répandu que Sony a été lent à résoudre. Les victimes signalent fréquemment que les canaux de support sont inadéquats, que les processus de résolution sont opaques, et que les comptes récupérés sont ensuite bannis à cause des actions des pirates.",
+    "about_p2": "Ce site recueille des signalements anonymes pour documenter l'ampleur du problème, identifier des schémas dans la façon dont les attaques se produisent, et fournir des conseils pratiques aux victimes. Aucune information personnelle n'est jamais publiée.",
+    "about_disclaimer": "Ceci est une ressource indépendante de sécurité des consommateurs. Elle n'est ni affiliée, ni approuvée, ni exploitée par Sony Interactive Entertainment."
+  },
+  "footer": {
+    "site_name": "psn-security-incidents.org"
+  },
+  "stub": {
+    "coming_soon": "Bientôt disponible",
+    "under_construction": "Cette section est en construction.",
+    "back_home": "Retour à l'accueil"
+  },
+  "report": {
+    "title": "Signaler",
+    "toggle_incident": "Signaler un incident",
+    "toggle_tip": "Signaler un indice sur le(s) pirate(s)",
+    "intro": "Soumettez un signalement anonyme de vol de votre compte PSN. En particulier si le compte était protégé par l'authentification à deux facteurs, que ce soit par SMS ou clé d'accès. Vous n'avez pas besoin de révéler votre identifiant PSN, votre e-mail, ou toute autre information privée. Les témoignages sont examinés et, si les détails sont cohérents, ils seront publiés sur la page Incidents, dûment anonymisés.",
+    "email_prompt": "Pour commencer, entrez votre adresse e-mail ci-dessous. Nous vous enverrons un lien unique pour saisir vos informations. Votre e-mail est utilisé uniquement à cette fin et n'est jamais publié.",
+    "returning_user": "Utilisateur existant ? Retrouvez les données que vous avez soumises en obtenant un nouveau lien à usage unique.",
+    "email_label": "Adresse e-mail",
+    "send_link": "Envoyer le lien",
+    "contactable": "Autoriser l'opérateur du site à me contacter à cette adresse e-mail s'il a des questions sur mon signalement. Votre e-mail n'est jamais publié."
+  },
+  "how_hacks": {
+    "title": "Comment on peut se faire pirater",
+    "intro": "Comprendre les vecteurs d'attaque utilisés pour voler des comptes PlayStation Network."
+  },
+  "support": {
+    "title": "Que voit un agent du support ?",
+    "intro": "Ce à quoi les agents du support PlayStation ont accès, et comment le processus de support est exploité.",
+    "context_note": "Ce qui suit est une reconstitution d'une partie clé de l'interface des agents de support « PACMAN », basée sur des vidéos et captures d'écran accessibles au public, en date de 2025. Toutes les données affichées sont fictives. Cela illustre la vue complète qu'un technicien de support a de votre identité personnelle et donc le risque que ces informations soient facilement divulguées.",
+    "signin_note": "Cliquer sur le champ Sign-in ID ouvre une fenêtre montrant l'historique complet des changements d'adresse e-mail du compte.",
+    "protected_note": "Les comptes en statut « Protected » affichent un pop-up rouge alertant l'agent que le compte est protégé et que certains champs ne peuvent pas être modifiés."
+  },
+  "incidents": {
+    "title": "Incidents majeurs et sélectionnés",
+    "intro": "Résumés de cas de vol de comptes PSN et de suppression de l'authentification à deux facteurs."
+  },
+  "intelligence": {
+    "title": "Renseignements",
+    "intro": "Informations sélectionnées sur les individus et méthodes derrière les vols de comptes PSN. Captures d'écran, communications et analyses contribuées par la communauté.",
+    "cta": "> Vous avez des informations ? Soumettez-les anonymement via la page Signaler."
+  },
+  "recovery": {
+    "title": "Guide de récupération de compte",
+    "intro": "Guide interactif étape par étape pour récupérer un compte PlayStation Network compromis. Cliquez sur n'importe quelle étape pour afficher les instructions détaillées.",
+    "incoming_contact_cta": "Communiquez-vous VRAIMENT avec le support Sony ?",
+    "incoming_contact_hint": "Rappels usurpés et faux support — cliquez pour lire avant de répondre",
+    "incoming_modal_title": "Communiquez-vous VRAIMENT avec le support Sony ?",
+    "incoming_modal_close": "\u2190 Retour au guide de récupération",
+    "modal_spoof_title": "Un pirate peut usurper le numéro du support technique pour vous appeler",
+    "modal_spoof_desc": "Il se fera passer pour le support PlayStation en proposant de vous aider à récupérer votre compte. C'est une attaque d'ingénierie sociale conçue pour extraire davantage d'informations ou vous distraire et retarder toute action que vous pourriez entreprendre pour récupérer votre compte.",
+    "modal_bbb_title": "Plaintes BBB et vérification des rappels",
+    "modal_bbb_intro": "Déposer une plainte auprès du BBB peut soit générer un appel sur le numéro de téléphone que vous avez laissé au BBB, soit générer un e-mail à l'adresse que vous avez renseignée au BBB indiquant qu'un appel a été tenté.",
+    "modal_bbb_inspect": "<strong class=\"text-white\">Inspectez soigneusement l'adresse de l'expéditeur.</strong> Les fournisseurs de messagerie modernes comme Gmail bloquent généralement les adresses <code class=\"text-terminal-green/80 bg-psn-surface px-1 rounded text-xs\">sony.com</code> usurpées, mais les attaquants utilisent des domaines similaires \u2014 par exemple <code class=\"text-terminal-green/80 bg-psn-surface px-1 rounded text-xs\">sony-support.com</code>, <code class=\"text-terminal-green/80 bg-psn-surface px-1 rounded text-xs\">playstation-account.com</code>, ou <code class=\"text-terminal-green/80 bg-psn-surface px-1 rounded text-xs\">sonysupport.net</code>. Vérifiez l'adresse complète « De », pas seulement le nom affiché. En cas de doute, collez les en-têtes complets de l'e-mail dans ChatGPT et demandez s'ils sont légitimes.",
+    "modal_bbb_overlap": "<strong class=\"text-white\">Attention aux recoupements.</strong> Si le numéro de téléphone ou l'e-mail que vous avez laissé au BBB est aussi celui de votre compte Sony, il est possible que l'appel ne provienne pas de Sony \u2014 le pirate peut avoir accès aux coordonnées de votre compte.",
+    "modal_bbb_challenge": "<strong class=\"text-white\">Mettez l'appelant au défi.</strong> Demandez-lui de citer le numéro de dossier de l'e-mail Sony lié au BBB. S'il ne peut pas citer ce numéro, raccrochez immédiatement.",
+    "modal_bbb_callback": "<strong class=\"text-white\">Rappelez Sony vous-même.</strong> Appelez Sony à leur numéro de support officiel et demandez à être mis en relation avec l'agent qui vous a appelé, en citant le numéro de dossier. Cela confirme que vous parlez à un vrai agent.",
+    "modal_bbb_warning": "<strong>Ne communiquez jamais</strong> avec le support Sony en dehors des e-mails <code class=\"bg-psn-surface px-1 rounded text-xs\">sony.com</code>. Ne répondez aux questions sur votre compte PSN que si vous êtes sûr à 100% de parler à un agent de restauration de compte Sony.",
+    "modal_social_title": "Avoir l'air légitime ne suffit pas",
+    "modal_social_p1": "Ce n'est pas parce qu'un agent a l'air légitime qu'il l'est vraiment. Les pirates emploient des personnes sans accent pour passer des appels de support convaincants et autoritaires.",
+    "modal_social_p2": "S'ils ne peuvent pas utiliser un appel ou un e-mail pour obtenir des informations et élargir l'attaque, ils vous distrairont et vous retarderont avec de fausses promesses pendant que les dossiers Sony et BBB sont en cours de clôture \u2014 ou sont clôturés par le pirate lui-même en se faisant passer pour vous."
+  },
+  "status": {
+    "title": "Votre signalement",
+    "intro": "Ajoutez des détails sur votre incident ci-dessous. Chaque entrée est horodatée et stockée de manière sécurisée. Vous pouvez revenir sur cette page à tout moment tant que votre lien est actif."
+  }
+}

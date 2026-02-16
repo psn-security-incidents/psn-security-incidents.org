@@ -2,9 +2,10 @@
  * i18n.js — Language detection, JSON loader, and DOM translator.
  *
  * Detection order:
- *   1. localStorage key "lang"
- *   2. navigator.languages (browser preference)
- *   3. Fallback: "en"
+ *   1. "lang" cookie (for testing)
+ *   2. localStorage key "lang"
+ *   3. navigator.languages (browser preference)
+ *   4. Fallback: "en"
  *
  * English text lives directly in the HTML. For non-English languages,
  * the corresponding lang/*.json is fetched and all elements with
@@ -16,7 +17,15 @@ const SUPPORTED = ['en', 'ja', 'es', 'pt-br', 'de', 'fr'];
 let currentLang = 'en';
 let translations = {};
 
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
 function detectLanguage() {
+  const cookie = getCookie('lang');
+  if (cookie && SUPPORTED.includes(cookie)) return cookie;
+
   const stored = localStorage.getItem('lang');
   if (stored && SUPPORTED.includes(stored)) return stored;
 
@@ -53,6 +62,12 @@ function applyTranslations() {
     const key = el.getAttribute('data-i18n');
     const value = resolve(translations, key);
     if (value) el.textContent = value;
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    const value = resolve(translations, key);
+    if (value) el.innerHTML = value;
   });
 }
 

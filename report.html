@@ -79,24 +79,27 @@
   <!-- Page Header -->
   <header class="max-w-4xl mx-auto px-4 pt-8 pb-2">
     <h1 class="text-2xl md:text-3xl font-mono font-bold text-white mb-3 tracking-tight">
-      <span class="text-terminal-green opacity-70 mr-2">$</span>Report
+      <span class="text-terminal-green opacity-70 mr-2">$</span><span data-i18n="report.title">Report</span>
     </h1>
 
     <!-- Toggle -->
     <div class="flex gap-1 bg-psn-dark border border-psn-border rounded-lg p-1 max-w-md mb-5">
       <button id="toggle-incident" type="button"
               class="flex-1 px-3 py-2 text-xs font-mono font-medium rounded-md transition-colors
-                     bg-psn-blue text-white">
+                     bg-psn-blue text-white"
+              data-i18n="report.toggle_incident">
         Report an Incident
       </button>
       <button id="toggle-tip" type="button"
               class="flex-1 px-3 py-2 text-xs font-mono font-medium rounded-md transition-colors
-                     text-gray-400 hover:text-gray-200">
+                     text-gray-400 hover:text-gray-200"
+              data-i18n="report.toggle_tip">
         Report a Tip on the Hacker(s)
       </button>
     </div>
 
-    <p id="report-intro" class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">
+    <p id="report-intro" class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl"
+       data-i18n="report.intro">
       Submit an anonymous report of your PSN account theft. Especially if the account was protected by two-factor either SMS or passkey. You do not need to reveal your PSN Id, email, or anything else private. Stories are reviewed and if the details add up, they will be published in the Incidents page, suitably anonymized.
     </p>
   </header>
@@ -105,18 +108,21 @@
   <main class="max-w-4xl mx-auto px-4 py-12">
     <div class="bg-psn-surface border border-psn-border rounded-lg p-6 md:p-8">
 
-      <p class="text-gray-400 text-sm leading-relaxed mb-6">
+      <p class="text-gray-400 text-sm leading-relaxed mb-6"
+         data-i18n="report.email_prompt">
         To begin, enter your email address below. We will email you a unique link you can
         use to enter information. Your email is used only for this purpose and is never
         published.
       </p>
 
-      <p class="text-gray-500 text-sm leading-relaxed mb-8">
+      <p class="text-gray-500 text-sm leading-relaxed mb-8"
+         data-i18n="report.returning_user">
         Returning user? Return to the data you've submitted by getting a new one-time link.
       </p>
 
       <form id="report-email-form" class="max-w-md">
-        <label for="report-email" class="block text-xs font-mono font-medium text-gray-400 mb-2">
+        <label for="report-email" class="block text-xs font-mono font-medium text-gray-400 mb-2"
+               data-i18n="report.email_label">
           Email Address
         </label>
         <div class="flex gap-3">
@@ -129,7 +135,8 @@
           <button type="submit"
                   class="px-5 py-2.5 bg-psn-blue text-white text-sm font-mono font-medium rounded
                          hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-psn-blue/50
-                         transition-colors flex-shrink-0">
+                         transition-colors flex-shrink-0"
+                  data-i18n="report.send_link">
             Send Link
           </button>
         </div>
@@ -137,7 +144,8 @@
           <input type="checkbox" id="report-contactable" name="contactable"
                  class="mt-0.5 w-4 h-4 rounded border-psn-border bg-psn-dark text-psn-blue
                         focus:ring-psn-blue/50 accent-[#0070d1]">
-          <span class="text-gray-400 text-xs leading-relaxed">
+          <span class="text-gray-400 text-xs leading-relaxed"
+                data-i18n="report.contactable">
             Allow the site operator to contact me at this email if they have
             questions about my report. Your email is never published.
           </span>

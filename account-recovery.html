@@ -198,10 +198,12 @@
         <div class="max-w-3xl mx-auto space-y-6">
 
           <div class="bg-red-500/5 border border-red-500/20 rounded-lg p-5 space-y-3">
-            <h3 class="font-mono font-bold text-red-400 text-sm">
+            <h3 class="font-mono font-bold text-red-400 text-sm"
+                data-i18n="recovery.modal_spoof_title">
               A hacker can spoof the 1-800 tech support number to call you
             </h3>
-            <p class="text-gray-300 text-sm leading-relaxed">
+            <p class="text-gray-300 text-sm leading-relaxed"
+               data-i18n="recovery.modal_spoof_desc">
               They will pose as PlayStation support offering to help recover your account.
               This is a social engineering attack designed to extract more information or
               distract and delay any actions you might otherwise take to recover your account.
@@ -214,9 +216,11 @@
               <svg class="w-4 h-4 text-amber-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
               </svg>
-              <h3 class="font-mono font-bold text-amber-400 text-sm">BBB Cases &amp; Callback Verification</h3>
+              <h3 class="font-mono font-bold text-amber-400 text-sm"
+                  data-i18n="recovery.modal_bbb_title">BBB Cases &amp; Callback Verification</h3>
             </div>
-            <p class="text-gray-300 text-sm leading-relaxed">
+            <p class="text-gray-300 text-sm leading-relaxed"
+               data-i18n="recovery.modal_bbb_intro">
               Raising a case with the BBB may either generate a call to you on the phone number
               you left at the BBB, or generate an email to the email address you filled out at the
               BBB saying a call has been attempted.
@@ -224,7 +228,7 @@
             <ul class="space-y-3 text-sm text-gray-300 leading-relaxed">
               <li class="flex gap-2">
                 <span class="text-amber-500 flex-shrink-0 mt-0.5">&rsaquo;</span>
-                <span><strong class="text-white">Inspect the sender address carefully.</strong> Modern
+                <span data-i18n-html="recovery.modal_bbb_inspect"><strong class="text-white">Inspect the sender address carefully.</strong> Modern
                 email providers like Gmail will generally block spoofed
                 <code class="text-terminal-green/80 bg-psn-surface px-1 rounded text-xs">sony.com</code>
                 addresses, but attackers use domains that look close &mdash; for example
@@ -236,25 +240,26 @@
               </li>
               <li class="flex gap-2">
                 <span class="text-amber-500 flex-shrink-0 mt-0.5">&rsaquo;</span>
-                <span><strong class="text-white">Watch for overlap.</strong> If the phone number or
+                <span data-i18n-html="recovery.modal_bbb_overlap"><strong class="text-white">Watch for overlap.</strong> If the phone number or
                 email you left with the BBB is also on your Sony account, it is possible that the
                 call is not from Sony &mdash; the hacker may have access to your account contact details.</span>
               </li>
               <li class="flex gap-2">
                 <span class="text-amber-500 flex-shrink-0 mt-0.5">&rsaquo;</span>
-                <span><strong class="text-white">Challenge the caller.</strong> Ask them to quote the
+                <span data-i18n-html="recovery.modal_bbb_challenge"><strong class="text-white">Challenge the caller.</strong> Ask them to quote the
                 case number from the Sony.com BBB-related email. If they cannot quote that case number,
                 hang up immediately.</span>
               </li>
               <li class="flex gap-2">
                 <span class="text-amber-500 flex-shrink-0 mt-0.5">&rsaquo;</span>
-                <span><strong class="text-white">Call Sony back yourself.</strong> Call Sony on their
+                <span data-i18n-html="recovery.modal_bbb_callback"><strong class="text-white">Call Sony back yourself.</strong> Call Sony on their
                 official support number and ask to be put through to the agent who called you, referencing
                 the case number. This confirms you are speaking to a real agent.</span>
               </li>
             </ul>
             <div class="bg-red-500/10 border border-red-500/20 rounded px-4 py-3 mt-2">
-              <p class="text-red-400 text-sm font-mono leading-relaxed">
+              <p class="text-red-400 text-sm font-mono leading-relaxed"
+                 data-i18n-html="recovery.modal_bbb_warning">
                 <strong>Never</strong> communicate with Sony support outside of
                 <code class="bg-psn-surface px-1 rounded text-xs">sony.com</code> email. Only answer
                 questions about your PSN account if you are 100% sure you are talking to a Sony account
@@ -269,13 +274,16 @@
               <svg class="w-4 h-4 text-violet-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
               </svg>
-              <h3 class="font-mono font-bold text-violet-400 text-sm">Sounding Legitimate Is Not Enough</h3>
+              <h3 class="font-mono font-bold text-violet-400 text-sm"
+                  data-i18n="recovery.modal_social_title">Sounding Legitimate Is Not Enough</h3>
             </div>
-            <p class="text-gray-300 text-sm leading-relaxed">
+            <p class="text-gray-300 text-sm leading-relaxed"
+               data-i18n="recovery.modal_social_p1">
               Just because an agent sounds legitimate does not mean they are legit. Hackers will
               employ un-accented people to make convincing and authoritative support calls.
             </p>
-            <p class="text-gray-300 text-sm leading-relaxed">
+            <p class="text-gray-300 text-sm leading-relaxed"
+               data-i18n="recovery.modal_social_p2">
               If they cannot use a call or email to get information and widen the attack, they will
               distract and delay with false promises while the actual Sony and BBB cases are being
               closed &mdash; or are closed by the hacker themselves via impersonation of you and

@@ -18,10 +18,14 @@ function formatDate(dateStr) {
 
 function renderItem(item, imageBase) {
   const article = document.createElement('article');
-  article.className = 'bg-psn-surface border border-psn-border rounded-lg overflow-hidden';
+  article.className = 'bg-psn-surface border border-psn-border rounded-lg overflow-hidden max-w-2xl mx-auto';
 
   const dateHtml = item.date
     ? `<time class="text-xs font-mono text-gray-500">${escapeHtml(formatDate(item.date))}</time>`
+    : '';
+
+  const descHtml = item.description
+    ? `<p class="text-gray-200 text-sm font-mono leading-relaxed whitespace-pre-line">${escapeHtml(item.description)}</p>`
     : '';
 
   let imageHtml = '';
@@ -37,21 +41,17 @@ function renderItem(item, imageBase) {
           alt="Intelligence evidence"
           ${dims}
           loading="lazy"
-          class="w-full h-auto border-b border-psn-border/50 cursor-zoom-in hover:opacity-90 transition-opacity"
+          class="w-full h-auto cursor-zoom-in hover:opacity-90 transition-opacity"
         >
       </a>`;
   }
 
-  const descHtml = item.description
-    ? `<p class="text-gray-300 text-sm leading-relaxed whitespace-pre-line">${escapeHtml(item.description)}</p>`
-    : '';
-
   article.innerHTML = `
-    ${imageHtml}
-    <div class="px-5 py-4">
-      <div class="mb-3">${dateHtml}</div>
+    <div class="px-5 py-4 border-b border-psn-border/50">
+      <div class="mb-2">${dateHtml}</div>
       ${descHtml}
-    </div>`;
+    </div>
+    ${imageHtml}`;
 
   return article;
 }

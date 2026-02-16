@@ -27,6 +27,41 @@
       "width": 1179,
       "height": 2886,
       "date": "2026-01-03"
+    },
+    {
+      "image": "trading-stolen-info.png",
+      "description": "Telegram group sharing stolen account details including name, DOB, serial, credit card, email, and 2FA number",
+      "width": 1204,
+      "height": 1368,
+      "date": "2025-10-09"
+    },
+    {
+      "image": "support-staff-corruption.png",
+      "description": "X post by @Hak00m_ showing a PlayStation Online Assistant offering to change account email in exchange for bitcoin",
+      "width": 1226,
+      "height": 1268,
+      "date": "2025-07-10"
+    },
+    {
+      "image": "account-zzyuj-stolen.jpeg",
+      "description": "Telegram post listing stolen account 'Zzyuj' with full PII, credit card, serial, and instructions to social-engineer support",
+      "width": 1234,
+      "height": 2048,
+      "date": "2025-10-10"
+    },
+    {
+      "image": "IMG_2982.2.JPG",
+      "description": "@nich.legends / Sinner threatens OG PSN account holder because he reverted his account. Subsequent to these threats the account was permanently banned by Sony for TOS violations (see telegram chat screenshot).",
+      "width": 1206,
+      "height": 2622,
+      "date": "2026-02-01"
+    },
+    {
+      "image": "PACMAN video taken by support staff.png",
+      "description": "X post by @Hak00m_ sharing video of the PACMAN support agent interface, demonstrating that every account is compromised",
+      "width": 1230,
+      "height": 1594,
+      "date": "2025-10-09"
     }
   ]
 }

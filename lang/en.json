@@ -44,8 +44,15 @@
     "back_home": "Back to Home"
   },
   "report": {
-    "title": "Report an Incident",
-    "intro": "Submit an anonymous report of your PSN account theft. Especially if the account was protected by two-factor either SMS or passkey. You do not need to reveal your PSN Id, email, or anything else private. Stories are reviewed and if the details add up, they will be published in the Incidents page, suitably anonymized."
+    "title": "Report",
+    "toggle_incident": "Report an Incident",
+    "toggle_tip": "Report a Tip on the Hacker(s)",
+    "intro": "Submit an anonymous report of your PSN account theft. Especially if the account was protected by two-factor either SMS or passkey. You do not need to reveal your PSN Id, email, or anything else private. Stories are reviewed and if the details add up, they will be published in the Incidents page, suitably anonymized.",
+    "email_prompt": "To begin, enter your email address below. We will email you a unique link you can use to enter information. Your email is used only for this purpose and is never published.",
+    "returning_user": "Returning user? Return to the data you've submitted by getting a new one-time link.",
+    "email_label": "Email Address",
+    "send_link": "Send Link",
+    "contactable": "Allow the site operator to contact me at this email if they have questions about my report. Your email is never published."
   },
   "how_hacks": {
     "title": "How You Can Get Hacked",
@@ -53,7 +60,10 @@
   },
   "support": {
     "title": "What Can a Support Rep See?",
-    "intro": "What PlayStation support agents can access, and how the support process is exploited."
+    "intro": "What PlayStation support agents can access, and how the support process is exploited.",
+    "context_note": "The following is a reconstruction of a key part of the support agent interface 'PACMAN', based on publicly available videos and screenshots, as of 2025. All data shown is placeholder only. This illustrates the complete view a support tech has of your personal identity and therefore the risk this can easily be leaked.",
+    "signin_note": "Clicking the Sign-in ID field opens a modal showing the full email address change history for the account.",
+    "protected_note": "Accounts in \"Protected\" status display a red pop-up alerting the rep that the account is protected and some fields cannot be edited."
   },
   "incidents": {
     "title": "High Profile and Selected Incidents",
@@ -66,7 +76,23 @@
   },
   "recovery": {
     "title": "Account Recovery Guide",
-    "intro": "Interactive step-by-step guide for recovering a compromised PlayStation Network account. Click any step to expand detailed instructions."
+    "intro": "Interactive step-by-step guide for recovering a compromised PlayStation Network account. Click any step to expand detailed instructions.",
+    "incoming_contact_cta": "Are you REALLY communicating with Sony Support?",
+    "incoming_contact_hint": "Spoofed callbacks and fake support \u2014 click to read before you respond",
+    "incoming_modal_title": "Are you REALLY communicating with Sony Support?",
+    "incoming_modal_close": "\u2190 Back to Recovery Guide",
+    "modal_spoof_title": "A hacker can spoof the 1-800 tech support number to call you",
+    "modal_spoof_desc": "They will pose as PlayStation support offering to help recover your account. This is a social engineering attack designed to extract more information or distract and delay any actions you might otherwise take to recover your account.",
+    "modal_bbb_title": "BBB Cases & Callback Verification",
+    "modal_bbb_intro": "Raising a case with the BBB may either generate a call to you on the phone number you left at the BBB, or generate an email to the email address you filled out at the BBB saying a call has been attempted.",
+    "modal_bbb_inspect": "<strong class=\"text-white\">Inspect the sender address carefully.</strong> Modern email providers like Gmail will generally block spoofed <code class=\"text-terminal-green/80 bg-psn-surface px-1 rounded text-xs\">sony.com</code> addresses, but attackers use domains that look close \u2014 for example <code class=\"text-terminal-green/80 bg-psn-surface px-1 rounded text-xs\">sony-support.com</code>, <code class=\"text-terminal-green/80 bg-psn-surface px-1 rounded text-xs\">playstation-account.com</code>, or <code class=\"text-terminal-green/80 bg-psn-surface px-1 rounded text-xs\">sonysupport.net</code>. Check the full \"From\" address, not just the display name. If in doubt, paste the full email headers into ChatGPT and ask if they are legitimate.",
+    "modal_bbb_overlap": "<strong class=\"text-white\">Watch for overlap.</strong> If the phone number or email you left with the BBB is also on your Sony account, it is possible that the call is not from Sony \u2014 the hacker may have access to your account contact details.",
+    "modal_bbb_challenge": "<strong class=\"text-white\">Challenge the caller.</strong> Ask them to quote the case number from the Sony.com BBB-related email. If they cannot quote that case number, hang up immediately.",
+    "modal_bbb_callback": "<strong class=\"text-white\">Call Sony back yourself.</strong> Call Sony on their official support number and ask to be put through to the agent who called you, referencing the case number. This confirms you are speaking to a real agent.",
+    "modal_bbb_warning": "<strong>Never</strong> communicate with Sony support outside of <code class=\"bg-psn-surface px-1 rounded text-xs\">sony.com</code> email. Only answer questions about your PSN account if you are 100% sure you are talking to a Sony account restoration agent.",
+    "modal_social_title": "Sounding Legitimate Is Not Enough",
+    "modal_social_p1": "Just because an agent sounds legitimate does not mean they are legit. Hackers will employ un-accented people to make convincing and authoritative support calls.",
+    "modal_social_p2": "If they cannot use a call or email to get information and widen the attack, they will distract and delay with false promises while the actual Sony and BBB cases are being closed \u2014 or are closed by the hacker themselves via impersonation of you and your account."
   },
   "status": {
     "title": "Your Report",
