@@ -15,13 +15,17 @@ export function initNav() {
   }
 
   // Highlight the current page link in the nav
+  // Normalise the current path to just the filename (or 'index.html' for root)
   const path = window.location.pathname;
+  const page = path.split('/').pop() || 'index.html';
+  const currentPage = (page === '' || page === '/') ? 'index' : page.replace(/\.html$/, '');
+
   document.querySelectorAll('nav a[href]').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === '/' && (path === '/' || path === '/index.html')) {
-      link.classList.remove('text-gray-400');
-      link.classList.add('text-terminal-green');
-    } else if (href !== '/' && path.endsWith(href.replace(/^\//, ''))) {
+    // Skip the site name link (home link)
+    if (href === '/') return;
+    const linkPage = href.split('/').pop().replace(/\.html$/, '');
+    if (linkPage === currentPage) {
       link.classList.remove('text-gray-400');
       link.classList.add('text-terminal-green');
     }

@@ -1,3 +1,22 @@
+/* === Critical Nav Layout (prevents reflow before Tailwind CDN loads) === */
+
+nav > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  nav > div:first-child > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
 /* === Background & Atmosphere === */
 
 body {
