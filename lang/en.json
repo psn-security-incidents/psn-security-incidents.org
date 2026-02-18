@@ -52,7 +52,10 @@
     "returning_user": "Returning user? Return to the data you've submitted by getting a new one-time link.",
     "email_label": "Email Address",
     "send_link": "Send Link",
-    "contactable": "Allow the site operator to contact me at this email if they have questions about my report. Your email is never published."
+    "contactable": "Allow the site operator to contact me at this email if they have questions about my report. Your email is never published.",
+    "easy_contact_title": "Prefer to email us directly?",
+    "easy_contact_desc": "If you'd rather skip the form, you can email your report or tip directly. Click below to reveal our anonymous contact address.",
+    "click_to_reveal": "Click to reveal email address"
   },
   "how_hacks": {
     "title": "How You Can Get Hacked",

@@ -31,8 +31,45 @@ function initToggle() {
   btnTip.addEventListener('click', () => activate(btnTip, btnIncident, INTRO_TIP));
 }
 
+function initRevealEmail() {
+  const btn = document.getElementById('reveal-email-btn');
+  const txt = document.getElementById('reveal-email-text');
+  if (!btn || !txt) return;
+
+  // Obfuscated as char-code pairs — never stored as a readable string in source
+  const p = [107,55,81,109,51,120,82,57,112,87,50,110];
+  const d = [112,114,111,116,111,110,46,109,101];
+
+  btn.addEventListener('click', () => {
+    const addr = String.fromCharCode(...p) + String.fromCharCode(64) + String.fromCharCode(...d);
+    txt.textContent = addr;
+    btn.classList.add('ring-1', 'ring-terminal-green/50');
+    const copyBtn = document.createElement('button');
+    copyBtn.type = 'button';
+    copyBtn.className = 'inline-flex items-center gap-1.5 ml-3 px-3 py-2 bg-psn-dark border border-psn-border ' +
+      'rounded text-xs font-mono text-gray-400 hover:text-terminal-green hover:border-terminal-green/40 ' +
+      'focus:outline-none transition-colors';
+    copyBtn.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
+      '<rect x="9" y="9" width="13" height="13" rx="2" stroke-width="2"/>' +
+      '<path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke-width="2"/></svg>' +
+      '<span>Copy</span>';
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(addr).then(() => {
+        copyBtn.querySelector('span').textContent = 'Copied!';
+        copyBtn.classList.add('text-terminal-green');
+        setTimeout(() => {
+          copyBtn.querySelector('span').textContent = 'Copy';
+          copyBtn.classList.remove('text-terminal-green');
+        }, 2000);
+      });
+    });
+    btn.parentNode.insertBefore(copyBtn, btn.nextSibling);
+  }, { once: true });
+}
+
 export function initReport() {
   initToggle();
+  initRevealEmail();
 
   const form = document.getElementById('report-email-form');
   const status = document.getElementById('report-email-status');

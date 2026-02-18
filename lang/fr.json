@@ -52,7 +52,10 @@
     "returning_user": "Utilisateur existant ? Retrouvez les données que vous avez soumises en obtenant un nouveau lien à usage unique.",
     "email_label": "Adresse e-mail",
     "send_link": "Envoyer le lien",
-    "contactable": "Autoriser l'opérateur du site à me contacter à cette adresse e-mail s'il a des questions sur mon signalement. Votre e-mail n'est jamais publié."
+    "contactable": "Autoriser l'opérateur du site à me contacter à cette adresse e-mail s'il a des questions sur mon signalement. Votre e-mail n'est jamais publié.",
+    "easy_contact_title": "Vous préférez nous écrire directement ?",
+    "easy_contact_desc": "Si vous préférez ne pas utiliser le formulaire, vous pouvez envoyer votre signalement ou indice directement par e-mail. Cliquez ci-dessous pour révéler notre adresse de contact anonyme.",
+    "click_to_reveal": "Cliquez pour révéler l'adresse e-mail"
   },
   "how_hacks": {
     "title": "Comment on peut se faire pirater",

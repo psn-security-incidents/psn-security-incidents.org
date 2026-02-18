@@ -1,6 +1,18 @@
 {
   "incidents": [
     {
+      "id": "(hidden)",
+      "date": "2026-01-06",
+      "headline": "Facebook user explains their account is repeatedly hacked despite two factor",
+      "detail": "Copy/pasted from FB posted complaint: 'All I get from them is a case number. My PlayStation account has been hacked multiple times over the past six months. Every time it happens, I follow the same routine: I contact PS support via phone or chat, and after verifying my security questions, they change my send me a link and it gets fixed. This time, however, was different playstation did not help. The hackers disabled my two-step verification, changed my email, and locked me out of my account (like usual) I've had this account since the PS4 days, and the only difference this time is that l've contacted support multiple times, providing all the necessary information. Still, they claim they can't assist me due to security purposes. It's time for them to stop allowing hackers to change my email! they won't even help me l have pass keys. I have all the information that I need and still it's the same thing over the past few days... NO HELP! I've had this account for over a decade, spending over $3,000 on digital games, and I'll lose all my game progression due to their security issues.  Unless I create a new account and rebuy the games, I'll lose everything because the company can't protect its customers.'",
+      "outcome": {
+        "status": "restored",
+        "summary": null
+      },
+      "tags": [],
+      "sources": []
+    },
+    {
       "id": "dav1d-123",
       "date": "2025-10-08",
       "headline": "#1 PSN trophy hunter worldwide gets hacked and his account listed on Telegram for sale",
