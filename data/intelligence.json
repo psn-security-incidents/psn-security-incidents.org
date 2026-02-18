@@ -15,6 +15,11 @@
       "date": "2026-02-19"
     },
     {
+      "type": "note",
+      "date": "2026-02-19",
+      "markdown": "## US Support Vulnerability\n\nScreenshots from Telegram and elsewhere suggest one method of account takeover involves a simple weakness in chat support procedures. The exploit has been censored here but it looks to be realistic.\n\nScreenshot [#b111ef] describes the method by \"Aw\", and screenshot [#1b86ef] is some chatter from September last year between hackers confirming that this is one of the methods @nich.legends and his 'group' uses 'all day' to 'jack USA accounts'."
+    },
+    {
       "image": "IMG_2988.JPG",
       "description": "Telegraph group announcing account reversions and successful account perma-bans (generated in revenge for account being reverted)",
       "width":1206,
