@@ -1,6 +1,18 @@
 {
   "incidents": [
     {
+      "id": "bear",
+      "date": "2026-01-07",
+      "headline": "'Bear' loses his account to spoofed Sony support call - and then things get even worse",
+      "detail": "US PSN Account 'bear' loses his account to a spoofed Sony support call. Support are unable to assist. After some time restoration of account is achieved through letter writing campaign to Sony US offices. With no communication from Sony or point of contact, he receives an account reset email link. Shortly after account restoration @nich.legend gets the account banned completely for TOS violations relating to actions made while the account was in his hands. Raising and fully documenting a new BBB case results in a final rejection by Sony USA - they consider his case now closed with no action possible.",
+      "outcome": {
+        "status": "unresolved",
+        "summary": "As of Feb 2026, no recovery possible"
+      },
+      "tags": [],
+      "sources": []
+    },
+    {
       "id": "(hidden)",
       "date": "2026-01-06",
       "headline": "Facebook user explains their account is repeatedly hacked despite two factor",
