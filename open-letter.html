@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How You Can Get Hacked — PSN Security Incidents</title>
+  <title>Open Letter to US PSN Executives — PSN Security Incidents</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -83,74 +83,38 @@
 
   <!-- Page Header -->
   <header class="max-w-4xl mx-auto px-4 pt-8 pb-2">
-    <h1 class="text-2xl md:text-3xl font-mono font-bold text-white mb-3 tracking-tight"
-        data-i18n="how_hacks.title">
-      <span class="text-terminal-green opacity-70 me-2">$</span>How You Can Get Hacked
+    <h1 class="text-2xl md:text-3xl font-mono font-bold text-white mb-3 tracking-tight">
+      <span class="text-terminal-green opacity-70 me-2">$</span>An Open Letter to US PSN Executives
     </h1>
-    <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl"
-       data-i18n="how_hacks.intro">
-      Understanding the attack vectors used to steal PlayStation Network accounts.
-    </p>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-8 space-y-10">
-
-    <!-- Method 1: Social Engineering of Support -->
-    <section class="bg-psn-surface border border-red-900/50 border-l-2 border-l-red-500 rounded-lg p-5 md:p-6">
-      <h2 class="font-mono font-bold text-white text-lg mb-3">
-        <span class="text-red-500 me-2">01</span>Social Engineering of Support Procedures
-      </h2>
-      <p class="text-gray-300 text-sm leading-relaxed mb-3">
-        Evidence suggests that some account takeovers require little or no personal information from the victim.
-        Attackers exploit weaknesses in chat support procedures to convince agents to hand over account access
-        directly. These methods bypass two-factor authentication entirely because the attacker never needs to
-        log in &mdash; support does the work for them.
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <div class="bg-psn-surface border border-psn-border rounded-lg p-6 md:p-8">
+      <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
+        Based on the evidence gathered so far &mdash; from community-submitted reports, leaked screenshots,
+        and documented support interactions &mdash; it will soon be possible to publish an open letter
+        to PlayStation Network leadership identifying some key problems with account security and
+        suggesting practical solutions.
       </p>
-      <p class="text-gray-400 text-sm leading-relaxed mb-4">
-        Screenshots and analysis of these techniques, including the so-called &ldquo;no info method&rdquo;, are
-        documented in the Intelligence section.
+      <p class="text-gray-400 text-sm leading-relaxed mb-6">
+        While we work on the exact content of this letter, please review the following sections:
       </p>
-      <a href="/intelligence.html"
-         class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:text-green-300 transition-colors">
-        <span>></span> View Intelligence
-      </a>
-    </section>
-
-    <!-- Method 2: Spoofed Support Calls -->
-    <section class="bg-psn-surface border border-orange-900/50 border-l-2 border-l-orange-500 rounded-lg p-5 md:p-6">
-      <h2 class="font-mono font-bold text-white text-lg mb-3">
-        <span class="text-orange-500 me-2">02</span><span data-i18n="how_hacks.method2_title">Caller-ID Support Call to Your Phone</span>
-      </h2>
-      <p class="text-gray-300 text-sm leading-relaxed" data-i18n="how_hacks.method2_desc">
-        Evidence reveals that @nich.legends is paying people to impersonate Sony US Support staff
-        (by adopting their names taken from LinkedIn), spoofing US Support caller IDs, and
-        impersonating Sony support scripts and procedures. Be alert to the possibility that any
-        call FROM &ldquo;support&rdquo; may not be Support. The goal of these calls is flexible:
-        it may be to ascertain information from you that can be used to take over your account,
-        or it may be to give you the impression an account takeover is being reversed, occupying
-        your attention while other things are going on.
-      </p>
-    </section>
-
-    <!-- Method 3: Information Gathering + Support Call -->
-    <section>
-      <div class="mb-4">
-        <h2 class="font-mono font-bold text-white text-lg mb-3">
-          <span class="text-amber-500 me-2">03</span>Information Gathering &amp; Support Impersonation
-        </h2>
-        <p class="text-gray-300 text-sm leading-relaxed">
-          A more involved method where attackers first gather personal details about the victim &mdash; from data
-          breaches, social media, or purchased databases &mdash; then use that information to impersonate the
-          account holder when contacting support.
-        </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="/intelligence.html"
+           class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:text-green-300 transition-colors">
+          <span>></span> Intelligence
+        </a>
+        <a href="/incidents.html"
+           class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:text-green-300 transition-colors">
+          <span>></span> Incidents
+        </a>
+        <a href="/how-it-happens.html"
+           class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:text-green-300 transition-colors">
+          <span>></span> How Hacks Happen
+        </a>
       </div>
-      <div class="bg-psn-surface border border-psn-border rounded-lg p-4 md:p-8">
-        <img src="/img/how-hacks-happen-infographic.png"
-             alt="Infographic: How Was Your Account Taken? Shows the steps from a hacker gathering personal information, calling Sony support to lift two-factor auth, changing emails repeatedly, creating new accounts with the victim's email, sending abuse messages, and ultimately selling the account or gaining control of linked accounts."
-             class="w-full max-w-lg mx-auto h-auto rounded">
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <!-- Footer -->

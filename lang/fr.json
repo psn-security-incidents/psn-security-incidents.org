@@ -59,7 +59,9 @@
   },
   "how_hacks": {
     "title": "Comment on peut se faire pirater",
-    "intro": "Comprendre les vecteurs d'attaque utilisés pour voler des comptes PlayStation Network."
+    "intro": "Comprendre les vecteurs d'attaque utilisés pour voler des comptes PlayStation Network.",
+    "method2_title": "Appel usurpé du support sur votre téléphone",
+    "method2_desc": "Des preuves révèlent que @nich.legends paie des personnes pour se faire passer pour le personnel du support Sony US (en adoptant leurs noms trouvés sur LinkedIn), en usurpant les identifiants d'appel du support US et en imitant les scripts et procédures du support Sony. Soyez vigilant : tout appel provenant du « support » peut ne pas être le vrai support. L'objectif de ces appels est flexible : il peut s'agir d'obtenir des informations permettant de prendre le contrôle de votre compte, ou de vous donner l'impression qu'une prise de contrôle est en cours d'annulation, occupant votre attention pendant que d'autres choses se passent."
   },
   "support": {
     "title": "Que voit un agent du support ?",

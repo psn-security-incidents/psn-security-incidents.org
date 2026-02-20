@@ -59,7 +59,9 @@
   },
   "how_hacks": {
     "title": "How You Can Get Hacked",
-    "intro": "Understanding the attack vectors used to steal PlayStation Network accounts."
+    "intro": "Understanding the attack vectors used to steal PlayStation Network accounts.",
+    "method2_title": "Caller-ID Support Call to Your Phone",
+    "method2_desc": "Evidence reveals that @nich.legends is paying people to impersonate Sony US Support staff (by adopting their names taken from LinkedIn), spoofing US Support caller IDs, and impersonating Sony support scripts and procedures. Be alert to the possibility that any call FROM \u201csupport\u201d may not be Support. The goal of these calls is flexible: it may be to ascertain information from you that can be used to take over your account, or it may be to give you the impression an account takeover is being reversed, occupying your attention while other things are going on."
   },
   "support": {
     "title": "What Can a Support Rep See?",
