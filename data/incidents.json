@@ -1,26 +1,6 @@
 {
   "incidents": [
     {
-      "id": "og-account-protected-blocked",
-      "date": "2026-02-14",
-      "headline": "OG PSN account hacked — 'protected' status blocks owner from getting any support help",
-      "handle": null,
-      "detail": "User's long-standing OG PSN account was hacked. The account had been compromised and recovered twice before, but this time Sony's 'protected' status on the account means the actual owner is completely locked out of receiving any support assistance. Despite being the legitimate owner with a history of recovering the account, the protection flag prevents support from making any changes or helping in any way.",
-      "outcome": {
-        "status": "unresolved",
-        "summary": "As of Feb 2026, owner is blocked from all support channels due to account protection status."
-      },
-      "tags": ["account-locked", "support-refused", "repeat-victim", "account-protected"],
-      "sources": [
-        {
-          "url": "https://www.reddit.com/r/PS5HelpSupport/comments/1r3ya7y/need_help_lost_access_to_account_support_refuses/",
-          "platform": "reddit",
-          "title": "Need help - lost access to account, support refuses to assist",
-          "date": "2026-02-14"
-        }
-      ]
-    },
-    {
       "id": "bear",
       "date": "2026-01-07",
       "headline": "'Bear' loses his account to spoofed Sony support call - and then things get even worse",
