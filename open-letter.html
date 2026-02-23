@@ -89,25 +89,103 @@
   </header>
 
   <!-- Content -->
-  <main class="max-w-4xl mx-auto px-4 py-8">
+  <main class="max-w-4xl mx-auto px-4 py-8 space-y-6">
+
+    <!-- Addressee -->
     <div class="bg-psn-surface border border-psn-border rounded-lg p-6 md:p-8">
-      <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
-        Based on the evidence gathered so far &mdash; from community-submitted reports, leaked screenshots,
-        and documented support interactions &mdash; it will soon be possible to publish an open letter
-        to PlayStation Network leadership identifying some key problems with account security and
-        suggesting practical solutions.
+      <p class="text-gray-400 text-sm font-mono mb-1">To:</p>
+      <p class="text-white text-base md:text-lg font-mono font-bold mb-4">
+        The Management Team of Sony USA &mdash; PlayStation Network Division
       </p>
-      <p class="text-gray-400 text-sm leading-relaxed mb-6">
-        While we work on the exact content of this letter, please review the following sections:
+      <p class="text-gray-500 text-xs font-mono">February 2026 &mdash; This is a placeholder open letter. The final version will incorporate additional evidence and community input.</p>
+    </div>
+
+    <!-- Letter Body -->
+    <div class="bg-psn-surface border border-psn-border rounded-lg p-6 md:p-8 space-y-5 text-gray-300 text-sm md:text-base leading-relaxed">
+
+      <p>
+        This open letter is a placeholder. Its final form will be shaped by the evidence gathered
+        from affected account holders, documented support interactions, and publicly reported incidents.
+        What follows is the core ask.
       </p>
-      <div class="flex flex-wrap gap-3">
-        <a href="/intelligence.html"
-           class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:text-green-300 transition-colors">
-          <span>></span> Intelligence
-        </a>
+
+      <h2 class="text-white font-mono font-bold text-lg pt-2">The Problem</h2>
+
+      <p>
+        'High-value' PSN accounts &mdash; those created at the inception of the network, or 
+        'High-profile' PSN accounts; those with a public persona such as trophy hunters or
+        top players are being stolen through methods that bypass two-factor
+        authentication, passkeys, and all security measure available to account holders.
+        In some cases the attacks appear to be carried out via social engineering of
+        Sony&rsquo;s own customer support agents and those have been the most difficult
+        to reverse.
+      </p>
+
+      <p>
+        When victims contact support to recover their accounts, they may be told
+        that the account has been &ldquo;protected,&rdquo; from modification. 
+        if an account is successfully reverted after a hack, the hacker can trigger a revenge 
+        ban or suspension: A no-appeal state applied as a consequence of actions taken
+        by the hacker, not the owner. Flags like these effectively lock the legitimate owner
+        out from restoration, or permanently ban the account because the appeal process
+        does not look at the reasons for the detected violations.
+      </p>
+
+      <h2 class="text-white font-mono font-bold text-lg pt-2">The Ask</h2>
+
+      <p>
+        At a bare minimum, PSN should offer a <strong class="text-white">dedicated case resolution
+        point of contact</strong> for victims who are willing and able to demonstrate continuous
+        prior ownership of an account that has been stolen through little to no fault of their own.
+      </p>
+
+      <p>This resolution process should:</p>
+
+      <ul class="list-disc list-inside space-y-2 pl-2 text-gray-300">
+        <li>
+          <strong class="text-white">Restore accounts upon verified ownership</strong> &mdash;
+          using identity verification methods that Sony already possesses (IP address logs,
+          console serial numbers, credit card details, transaction history,
+          original email, original PSN ID) to confirm the claimant is
+          the legitimate account holder.
+        </li>
+        <li>
+          <strong class="text-white">Erase or mask all Terms of Service violations</strong>
+          that occurred during the period the account was out of the owner&rsquo;s hands.
+          A victim of a hack should be punished for actions taken by the person who stole
+          their account.
+        </li>
+        <li>
+          <strong class="text-white">Not reject support requests</strong> on the basis that
+          an account is &ldquo;protected,&rdquo; &ldquo;banned,&rdquo; &ldquo;suspended,&rdquo;
+          or in any other state where those flags were applied as a direct result of the hack.
+          These states are symptoms of the theft, not disqualifying conditions.
+        </li>
+      </ul>
+
+      <p>
+        In summary, create an <strong class="text-white">executive escalation path</strong>
+        for the rare but difficult cases where existing Sony support channels are blocked from
+        assisting victims by the very flags that the hack itself created. Frontline agents are
+        not at fault &mdash; they are following policy. But that policy currently serves to
+        block communication by victimas.
+      </p>
+
+      <h2 class="text-white font-mono font-bold text-lg pt-2">Supporting Evidence</h2>
+
+      <p class="text-gray-400">
+        The incidents and intelligence documented on this site provide the context for this request.
+        We encourage Sony&rsquo;s management team to review:
+      </p>
+
+      <div class="flex flex-wrap gap-3 pt-1">
         <a href="/incidents.html"
            class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:text-green-300 transition-colors">
-          <span>></span> Incidents
+          <span>></span> Documented Incidents
+        </a>
+        <a href="/intelligence.html"
+           class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:text-green-300 transition-colors">
+          <span>></span> Intelligence on PSN Hackers
         </a>
         <a href="/how-it-happens.html"
            class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:text-green-300 transition-colors">
@@ -115,6 +193,7 @@
         </a>
       </div>
     </div>
+
   </main>
 
   <!-- Footer -->

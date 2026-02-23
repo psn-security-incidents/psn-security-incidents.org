@@ -429,7 +429,7 @@
                     "id": "all.wdw.sms-2fa",
                     "type": "warning",
                     "label": "Adding back two-factor SMS login",
-                    "detail": "SMS-based 2FA can be bypassed through SIM swapping or (more likely) social engineering using fragments of your identity, on a support call. It's better than nothing but not sufficient as a sole security measure after a compromise. Sony recommend a passkey over two-factor SMS."
+                    "detail": "SMS-based 2FA can be bypassed social engineering using fragments of your identity on a support call. It's better than nothing but not sufficient as a sole security measure after a compromise. Sony recommend an authenticator app or passkey over two-factor SMS."
                   }
                 ]
               }
