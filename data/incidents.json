@@ -25,14 +25,34 @@
       "sources": []
     },
     {
+      "id": "dav1d-123-permaban",
+      "date": "2026-03-11",
+      "headline": "World's #1 PSN trophy hunter permanently banned after hacker sends rule-violating messages from his account",
+      "handle": "dav1d_123",
+      "detail": "Follow-up to the October 2025 hack of dav1d_123. David Tremblay, the world's top PlayStation trophy holder with multiple Guinness World Records for most Platinum trophies, has received a permanent suspension on his account. The hacker who compromised his account last October — bypassing 2FA by providing basic information to PlayStation's support chat — reportedly sent rule-violating messages from the account and then reported them, a tactic known as a 'bomb message', deliberately triggering a ban. Tremblay's account now displays zero trophies. He described losing 16+ years of trophy hunting as 'heartbreaking' and blamed Sony's 'incompetent' support and security teams for both the original breach and the subsequent permanent loss of his account.",
+      "outcome": {
+        "status": "banned",
+        "summary": "Account permanently suspended due to TOS violations committed by the hacker. 16+ years of trophies and Guinness World Records effectively erased."
+      },
+      "tags": ["high-profile", "post-hack-ban", "bomb-message", "2fa-bypass", "support-engineering", "account-lost", "digital-library-lost"],
+      "sources": [
+        {
+          "url": "https://kotaku.com/top-playstation-trophy-hunter-permabanned-blames-hacker-sony-2000677954",
+          "platform": "news",
+          "title": "Kotaku — Top PlayStation Trophy Hunter Permabanned, Blames Hacker And Sony",
+          "date": "2026-03-11"
+        }
+      ]
+    },
+    {
       "id": "dav1d-123",
       "date": "2025-10-08",
       "headline": "dav1d_123 #1 PSN trophy hunter worldwide gets hacked and his account listed on Telegram for sale",
       "handle": "dav1d_123",
       "detail": "His account with two-step verificationwas taken over and he cannot talk to anyone in support about it. Suspected to be nich.legends the account was sold and the thief changed the PSN ID to \"Zzyuj\" and privated all trophies and games, Zzyuj even freely boasted over PSN chat about the ease with which accounts can be taken. To re-iterate, Two-step verification was active on the account at the time of the compromise. The community noted that Sony had similarly failed to help in the prior case of Hakoom, another high-profile trophy hunter. Review the x.com thread for details and comments",
       "outcome": {
-        "status": "unknown",
-        "summary": null
+        "status": "banned",
+        "summary": "Account was eventually recovered but then permanently banned in March 2026 after the hacker sent rule-violating messages and reported them (bomb message tactic). See dav1d-123-permaban."
       },
       "tags": ["high-profile", "handle-theft", "2fa-bypass", "account-sale"],
       "sources": [
